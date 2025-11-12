@@ -330,8 +330,7 @@
 
 .grid-container--sudoku {
     padding: 10px;
-    /* REMOVIDO: border-top-width: 1px; */
-    /* REMOVIDO: border-left-width: 1px; */
+    /* Linhas superior e esquerda do container removidas, pois as células as desenham. */
     border-color: var(--color-grid-line);
     position: relative; 
 }
@@ -343,14 +342,42 @@
 .sudoku-cell {
     width: 40px;
     height: 40px;
-    /* AGORA TODAS AS BORDAS TÊM 1PX */
-    border-top-width: 1px;    /* Adiciona a borda superior */
-    border-left-width: 1px;   /* Adiciona a borda esquerda */
+    /* CORRIGIDO: Todas as 4 bordas têm 1px para fechar o quadrado. */
+    border-top-width: 1px;    
+    border-left-width: 1px;   
     border-bottom-width: 1px;
     border-right-width: 1px;
     border-color: var(--color-grid-line);
     align-items: center;
     justify-content: center;
+}
+
+/* ===================================================== */
+/* NOVOS ESTILOS PARA LINHAS GROSSAS (ELEMENTOS SEPARADOS) */
+/* ===================================================== */
+
+.sudoku-grid-lines-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* Altura/Largura total do container, incluindo o padding de 10px de cada lado (368px + 20px) */
+    width: 388px; 
+    height: 388px;
+    -unity-z-index: 1; 
+}
+
+.sudoku-thick-line {
+    background-color: var(--color-text-dark); /* Cor preta */
+    position: absolute;
+    -unity-z-index: 2;
+}
+
+.sudoku-thick-line--vertical {
+    width: 3px; 
+}
+
+.sudoku-thick-line--horizontal {
+    height: 3px; 
 }
 
 /* ===================================================== */

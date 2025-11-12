@@ -5,7 +5,8 @@
         <ui:VisualElement class="game-header">
             <ui:Button text="Menu" name="menu-button" class="button button--with-icon" />
             <ui:Label text="SUDOKU" class="title-h1" />
-            <ui:VisualElement class="header-spacer" /> </ui:VisualElement>
+            <ui:VisualElement class="header-spacer" /> 
+        </ui:VisualElement>
 
         <ui:VisualElement class="game-controls-container">
             <ui:Button text="Dica" name="hint-button" class="button button--with-icon" />
@@ -13,13 +14,29 @@
         </ui:VisualElement>
 
         <ui:VisualElement name="sudoku-grid-container" class="grid-container grid-container--sudoku">
+            
+            <ui:VisualElement class="sudoku-grid-lines-container">
+                
+                <ui:VisualElement class="sudoku-thick-line sudoku-thick-line--vertical" 
+                    style="left: 133px; top: 10px; height: 388px;" />
+                
+                <ui:VisualElement class="sudoku-thick-line sudoku-thick-line--vertical" 
+                    style="left: 256px; top: 10px; height: 388px;" />
+
+                <ui:VisualElement class="sudoku-thick-line sudoku-thick-line--horizontal" 
+                    style="top: 133px; left: 10px; width: 388px;" />
+                
+                <ui:VisualElement class="sudoku-thick-line sudoku-thick-line--horizontal" 
+                    style="top: 256px; left: 10px; width: 388px;" />
+            </ui:VisualElement>
+
             <ui:VisualElement name="grid-row-0" class="sudoku-row">
                 <ui:VisualElement name="cell-0-0" class="sudoku-cell"><ui:Label text="5" class="cell-number" /></ui:VisualElement>
                 <ui:VisualElement name="cell-0-1" class="sudoku-cell"><ui:Label class="cell-number" /></ui:VisualElement>
-                <ui:VisualElement name="cell-0-2" class="sudoku-cell sudoku-cell--border-right"><ui:Label class="cell-number" /></ui:VisualElement>
+                <ui:VisualElement name="cell-0-2" class="sudoku-cell"><ui:Label class="cell-number" /></ui:VisualElement>
                 <ui:VisualElement name="cell-0-3" class="sudoku-cell"><ui:Label text="6" class="cell-number" /></ui:VisualElement>
                 <ui:VisualElement name="cell-0-4" class="sudoku-cell"><ui:Label text="7" class="cell-number" /></ui:VisualElement>
-                <ui:VisualElement name="cell-0-5" class="sudoku-cell sudoku-cell--border-right"><ui:Label class="cell-number" /></ui:VisualElement>
+                <ui:VisualElement name="cell-0-5" class="sudoku-cell"><ui:Label class="cell-number" /></ui:VisualElement>
                 <ui:VisualElement name="cell-0-6" class="sudoku-cell"><ui:Label text="9" class="cell-number" /></ui:VisualElement>
                 <ui:VisualElement name="cell-0-7" class="sudoku-cell"><ui:Label class="cell-number" /></ui:VisualElement>
                 <ui:VisualElement name="cell-0-8" class="sudoku-cell"><ui:Label class="cell-number" /></ui:VisualElement>
@@ -27,21 +44,21 @@
             <ui:VisualElement name="grid-row-1" class="sudoku-row">
                 <ui:VisualElement name="cell-1-0" class="sudoku-cell"><ui:Label class="cell-number" /></ui:VisualElement>
                 <ui:VisualElement name="cell-1-1" class="sudoku-cell"><ui:Label text="2" class="cell-number" /></ui:VisualElement>
-                <ui:VisualElement name="cell-1-2" class="sudoku-cell sudoku-cell--border-right"><ui:Label text="1" class="cell-number" /></ui:VisualElement>
+                <ui:VisualElement name="cell-1-2" class="sudoku-cell"><ui:Label text="1" class="cell-number" /></ui:VisualElement>
                 <ui:VisualElement name="cell-1-3" class="sudoku-cell"><ui:Label class="cell-number" /></ui:VisualElement>
                 <ui:VisualElement name="cell-1-4" class="sudoku-cell"><ui:Label text="5" class="cell-number" /></ui:VisualElement>
-                <ui:VisualElement name="cell-1-5" class="sudoku-cell sudoku-cell--border-right"><ui:Label text="3" class="cell-number" /></ui:VisualElement>
+                <ui:VisualElement name="cell-1-5" class="sudoku-cell"><ui:Label text="3" class="cell-number" /></ui:VisualElement>
                 <ui:VisualElement name="cell-1-6" class="sudoku-cell"><ui:Label class="cell-number" /></ui:VisualElement>
                 <ui:VisualElement name="cell-1-7" class="sudoku-cell"><ui:Label text="8" class="cell-number" /></ui:VisualElement>
                 <ui:VisualElement name="cell-1-8" class="sudoku-cell"><ui:Label class="cell-number" /></ui:VisualElement>
             </ui:VisualElement>
-            <ui:VisualElement name="grid-row-2" class="sudoku-row sudoku-row--border-bottom">
+            <ui:VisualElement name="grid-row-2" class="sudoku-row">
                 <ui:VisualElement name="cell-2-0" class="sudoku-cell"><ui:Label text="1" class="cell-number" /></ui:VisualElement>
                 <ui:VisualElement name="cell-2-1" class="sudoku-cell"><ui:Label class="cell-number" /></ui:VisualElement>
-                <ui:VisualElement name="cell-2-2" class="sudoku-cell sudoku-cell--border-right"><ui:Label text="8" class="cell-number" /></ui:VisualElement>
+                <ui:VisualElement name="cell-2-2" class="sudoku-cell"><ui:Label text="8" class="cell-number" /></ui:VisualElement>
                 <ui:VisualElement name="cell-2-3" class="sudoku-cell"><ui:Label text="3" class="cell-number" /></ui:VisualElement>
                 <ui:VisualElement name="cell-2-4" class="sudoku-cell"><ui:Label text="4" class="cell-number" /></ui:VisualElement>
-                <ui:VisualElement name="cell-2-5" class="sudoku-cell sudoku-cell--border-right"><ui:Label text="2" class="cell-number" /></ui:VisualElement>
+                <ui:VisualElement name="cell-2-5" class="sudoku-cell"><ui:Label text="2" class="cell-number" /></ui:VisualElement>
                 <ui:VisualElement name="cell-2-6" class="sudoku-cell"><ui:Label text="5" class="cell-number" /></ui:VisualElement>
                 <ui:VisualElement name="cell-2-7" class="sudoku-cell"><ui:Label class="cell-number" /></ui:VisualElement>
                 <ui:VisualElement name="cell-2-8" class="sudoku-cell"><ui:Label text="7" class="cell-number" /></ui:VisualElement>
@@ -49,10 +66,10 @@
             <ui:VisualElement name="grid-row-3" class="sudoku-row">
                 <ui:VisualElement name="cell-3-0" class="sudoku-cell"><ui:Label text="8" class="cell-number" /></ui:VisualElement>
                 <ui:VisualElement name="cell-3-1" class="sudoku-cell"><ui:Label class="cell-number" /></ui:VisualElement>
-                <ui:VisualElement name="cell-3-2" class="sudoku-cell sudoku-cell--border-right"><ui:Label class="cell-number" /></ui:VisualElement>
+                <ui:VisualElement name="cell-3-2" class="sudoku-cell"><ui:Label class="cell-number" /></ui:VisualElement>
                 <ui:VisualElement name="cell-3-3" class="sudoku-cell"><ui:Label text="7" class="cell-number" /></ui:VisualElement>
                 <ui:VisualElement name="cell-3-4" class="sudoku-cell"><ui:Label class="cell-number" /></ui:VisualElement>
-                <ui:VisualElement name="cell-3-5" class="sudoku-cell sudoku-cell--border-right"><ui:Label class="cell-number" /></ui:VisualElement>
+                <ui:VisualElement name="cell-3-5" class="sudoku-cell"><ui:Label class="cell-number" /></ui:VisualElement>
                 <ui:VisualElement name="cell-3-6" class="sudoku-cell"><ui:Label class="cell-number" /></ui:VisualElement>
                 <ui:VisualElement name="cell-3-7" class="sudoku-cell"><ui:Label class="cell-number" /></ui:VisualElement>
                 <ui:VisualElement name="cell-3-8" class="sudoku-cell"><ui:Label text="3" class="cell-number" /></ui:VisualElement>
@@ -60,24 +77,32 @@
             <ui:VisualElement name="grid-row-4" class="sudoku-row">
                 <ui:VisualElement name="cell-4-0" class="sudoku-cell"><ui:Label class="cell-number" /></ui:VisualElement>
                 <ui:VisualElement name="cell-4-1" class="sudoku-cell"><ui:Label text="2" class="cell-number" /></ui:VisualElement>
-                <ui:VisualElement name="cell-4-2" class="sudoku-cell sudoku-cell--border-right"><ui:Label class="cell-number" /></ui:VisualElement>
+                <ui:VisualElement name="cell-4-2" class="sudoku-cell"><ui:Label class="cell-number" /></ui:VisualElement>
                 <ui:VisualElement name="cell-4-3" class="sudoku-cell"><ui:Label text="8" class="cell-number" /></ui:VisualElement>
                 <ui:VisualElement name="cell-4-4" class="sudoku-cell"><ui:Label text="5" class="cell-number" /></ui:VisualElement>
-                <ui:VisualElement name="cell-4-5" class="sudoku-cell sudoku-cell--border-right"><ui:Label text="3" class="cell-number" /></ui:VisualElement>
+                <ui:VisualElement name="cell-4-5" class="sudoku-cell"><ui:Label text="3" class="cell-number" /></ui:VisualElement>
                 <ui:VisualElement name="cell-4-6" class="sudoku-cell"><ui:Label text="7" class="cell-number" /></ui:VisualElement>
                 <ui:VisualElement name="cell-4-7" class="sudoku-cell"><ui:Label class="cell-number" /></ui:VisualElement>
                 <ui:VisualElement name="cell-4-8" class="sudoku-cell"><ui:Label class="cell-number" /></ui:VisualElement>
             </ui:VisualElement>
-            <ui:VisualElement name="grid-row-5" class="sudoku-row sudoku-row--border-bottom">
-                 <ui:VisualElement name="cell-5-0" class="sudoku-cell"><ui:Label class="cell-number" /></ui:VisualElement>
-                 <ui:VisualElement name="cell-5-1" class="sudoku-cell"><ui:Label text="1" class="cell-number" /></ui:VisualElement> <ui:VisualElement name="cell-5-2" class="sudoku-cell sudoku-cell--border-right"><ui:Label text="3" class="cell-number" /></ui:VisualElement> <ui:VisualElement name="cell-5-3" class="sudoku-cell"><ui:Label text="9" class="cell-number" /></ui:VisualElement> <ui:VisualElement name="cell-5-4" class="sudoku-cell"><ui:Label class="cell-number" /></ui:VisualElement> <ui:VisualElement name="cell-5-5" class="sudoku-cell sudoku-cell--border-right"><ui:Label text="4" class="cell-number" /></ui:VisualElement> <ui:VisualElement name="cell-5-6" class="sudoku-cell"><ui:Label class="cell-number" /></ui:VisualElement> <ui:VisualElement name="cell-5-7" class="sudoku-cell"><ui:Label text="5" class="cell-number" /></ui:VisualElement> <ui:VisualElement name="cell-5-8" class="sudoku-cell"><ui:Label text="6" class="cell-number" /></ui:VisualElement> </ui:VisualElement>
+            <ui:VisualElement name="grid-row-5" class="sudoku-row">
+                <ui:VisualElement name="cell-5-0" class="sudoku-cell"><ui:Label class="cell-number" /></ui:VisualElement>
+                <ui:VisualElement name="cell-5-1" class="sudoku-cell"><ui:Label text="1" class="cell-number" /></ui:VisualElement> 
+                <ui:VisualElement name="cell-5-2" class="sudoku-cell"><ui:Label text="3" class="cell-number" /></ui:VisualElement> 
+                <ui:VisualElement name="cell-5-3" class="sudoku-cell"><ui:Label text="9" class="cell-number" /></ui:VisualElement> 
+                <ui:VisualElement name="cell-5-4" class="sudoku-cell"><ui:Label class="cell-number" /></ui:VisualElement> 
+                <ui:VisualElement name="cell-5-5" class="sudoku-cell"><ui:Label text="4" class="cell-number" /></ui:VisualElement> 
+                <ui:VisualElement name="cell-5-6" class="sudoku-cell"><ui:Label class="cell-number" /></ui:VisualElement> 
+                <ui:VisualElement name="cell-5-7" class="sudoku-cell"><ui:Label text="5" class="cell-number" /></ui:VisualElement> 
+                <ui:VisualElement name="cell-5-8" class="sudoku-cell"><ui:Label text="6" class="cell-number" /></ui:VisualElement> 
+            </ui:VisualElement>
             <ui:VisualElement name="grid-row-6" class="sudoku-row">
                 <ui:VisualElement name="cell-6-0" class="sudoku-cell"><ui:Label class="cell-number" /></ui:VisualElement>
                 <ui:VisualElement name="cell-6-1" class="sudoku-cell"><ui:Label text="6" class="cell-number" /></ui:VisualElement>
-                <ui:VisualElement name="cell-6-2" class="sudoku-cell sudoku-cell--border-right"><ui:Label text="1" class="cell-number" /></ui:VisualElement>
+                <ui:VisualElement name="cell-6-2" class="sudoku-cell"><ui:Label text="1" class="cell-number" /></ui:VisualElement>
                 <ui:VisualElement name="cell-6-3" class="sudoku-cell"><ui:Label text="5" class="cell-number" /></ui:VisualElement>
                 <ui:VisualElement name="cell-6-4" class="sudoku-cell"><ui:Label text="3" class="cell-number" /></ui:VisualElement>
-                <ui:VisualElement name="cell-6-5" class="sudoku-cell sudoku-cell--border-right"><ui:Label text="7" class="cell-number" /></ui:VisualElement>
+                <ui:VisualElement name="cell-6-5" class="sudoku-cell"><ui:Label text="7" class="cell-number" /></ui:VisualElement>
                 <ui:VisualElement name="cell-6-6" class="sudoku-cell"><ui:Label text="2" class="cell-number" /></ui:VisualElement>
                 <ui:VisualElement name="cell-6-7" class="sudoku-cell"><ui:Label class="cell-number" /></ui:VisualElement>
                 <ui:VisualElement name="cell-6-8" class="sudoku-cell"><ui:Label text="4" class="cell-number" /></ui:VisualElement>
@@ -85,10 +110,10 @@
             <ui:VisualElement name="grid-row-7" class="sudoku-row">
                 <ui:VisualElement name="cell-7-0" class="sudoku-cell"><ui:Label text="2" class="cell-number" /></ui:VisualElement>
                 <ui:VisualElement name="cell-7-1" class="sudoku-cell"><ui:Label text="8" class="cell-number" /></ui:VisualElement>
-                <ui:VisualElement name="cell-7-2" class="sudoku-cell sudoku-cell--border-right"><ui:Label text="7" class="cell-number" /></ui:VisualElement>
+                <ui:VisualElement name="cell-7-2" class="sudoku-cell"><ui:Label text="7" class="cell-number" /></ui:VisualElement>
                 <ui:VisualElement name="cell-7-3" class="sudoku-cell"><ui:Label class="cell-number" /></ui:VisualElement>
                 <ui:VisualElement name="cell-7-4" class="sudoku-cell"><ui:Label text="1" class="cell-number" /></ui:VisualElement>
-                <ui:VisualElement name="cell-7-5" class="sudoku-cell sudoku-cell--border-right"><ui:Label class="cell-number" /></ui:VisualElement>
+                <ui:VisualElement name="cell-7-5" class="sudoku-cell"><ui:Label class="cell-number" /></ui:VisualElement>
                 <ui:VisualElement name="cell-7-6" class="sudoku-cell"><ui:Label class="cell-number" /></ui:VisualElement>
                 <ui:VisualElement name="cell-7-7" class="sudoku-cell"><ui:Label text="3" class="cell-number" /></ui:VisualElement>
                 <ui:VisualElement name="cell-7-8" class="sudoku-cell"><ui:Label text="5" class="cell-number" /></ui:VisualElement>
@@ -96,10 +121,10 @@
             <ui:VisualElement name="grid-row-8" class="sudoku-row">
                 <ui:VisualElement name="cell-8-0" class="sudoku-cell"><ui:Label class="cell-number" /></ui:VisualElement>
                 <ui:VisualElement name="cell-8-1" class="sudoku-cell"><ui:Label class="cell-number" /></ui:VisualElement>
-                <ui:VisualElement name="cell-8-2" class="sudoku-cell sudoku-cell--border-right"><ui:Label text="5" class="cell-number" /></ui:VisualElement>
+                <ui:VisualElement name="cell-8-2" class="sudoku-cell"><ui:Label text="5" class="cell-number" /></ui:VisualElement>
                 <ui:VisualElement name="cell-8-3" class="sudoku-cell"><ui:Label class="cell-number" /></ui:VisualElement>
                 <ui:VisualElement name="cell-8-4" class="sudoku-cell"><ui:Label text="8" class="cell-number" /></ui:VisualElement>
-                <ui:VisualElement name="cell-8-5" class="sudoku-cell sudoku-cell--border-right"><ui:Label text="6" class="cell-number" /></ui:VisualElement>
+                <ui:VisualElement name="cell-8-5" class="sudoku-cell"><ui:Label text="6" class="cell-number" /></ui:VisualElement>
                 <ui:VisualElement name="cell-8-6" class="sudoku-cell"><ui:Label text="1" class="cell-number" /></ui:VisualElement>
                 <ui:VisualElement name="cell-8-7" class="sudoku-cell"><ui:Label text="7" class="cell-number" /></ui:VisualElement>
                 <ui:VisualElement name="cell-8-8" class="sudoku-cell"><ui:Label text="9" class="cell-number" /></ui:VisualElement>
