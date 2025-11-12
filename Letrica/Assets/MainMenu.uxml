@@ -1,0 +1,38 @@
+<UXML xmlns="UnityEngine.UIElements" xmlns:ui="UnityEngine.UIElements">
+
+    <VisualElement name="main-menu-container" class="root-container">
+
+        <VisualElement name="header-container" class="header-container">
+            <Label text="Letrica" name="main-title" class="title-h1" />
+            <Label text="JOGOS PARA A MENTE" name="subtitle" class="subtitle" />
+        </VisualElement>
+
+        <VisualElement name="game-select-container" class="game-select-container">
+
+            <Button name="termo-button" class="game-button game-button--termo">
+                <VisualElement name="termo-icon-container" class="icon-container">
+                    <VisualElement name="termo-icon" class="icon icon--brain" />
+                </VisualElement>
+                <Label text="TERMO" class="game-button__title" />
+                <Label text="Adivinhe palavras" class="game-button__description" />
+            </Button>
+
+            <Button name="sudoku-button" class="game-button game-button--sudoku">
+                <VisualElement name="sudoku-icon-container" class="icon-container">
+                    <VisualElement name="sudoku-icon" class="icon icon--grid" />
+                </VisualElement>
+                <Label text="SUDOKU" class="game-button__title" />
+                <Label text="Grade de números" class="game-button__description" />
+            </Button>
+
+        </VisualElement>
+
+        <VisualElement name="footer-container" class="footer-container">
+            <Button name="settings-button" class="button button--secondary button--with-icon">
+                <VisualElement name="settings-icon" class="icon icon--settings" />
+                <Label text="Configurações" />
+            </Button>
+        </VisualElement>
+
+    </VisualElement>
+</UXML>
