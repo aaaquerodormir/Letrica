@@ -3,25 +3,46 @@
     <ui:VisualElement name="termo-screen-container" class="root-container root-container--termo">
         <ui:VisualElement name="game-header" class="game-header">
             <ui:Button name="menu-button" class="button button--icon button--secondary" style="width: 120px; height: 80px;">
-                <ui:Label text="Menu" style="bottom: -10px; font-size: 22px;" />
+                <VisualElement style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Images/CasaIcon.png?fileID=2800000&amp;guid=8ba9205c2ddbddc4fbb37d234c9abcff&amp;type=3#CasaIcon&quot;); width: 80px;" />
             </ui:Button>
-            <ui:Label text="TERMO" name="game-title" class="title-h1" style="left: -20px;" />
+            <ui:Label text="TERMO" name="game-title" class="title-h1" style="left: -10px;" />
             <ui:VisualElement class="header-spacer" />
+            <ui:VisualElement name="new-game-icon" class="icon icon--new-game" />
         </ui:VisualElement>
         <ui:VisualElement name="grid-container" class="grid-container" style="height: 450px; width: 450px;">
             <ui:VisualElement name="grid-row-0" class="grid-row">
-                <ui:VisualElement name="cell-0-0" class="grid-cell" />
-                <ui:VisualElement name="cell-0-1" class="grid-cell" />
-                <ui:VisualElement name="cell-0-2" class="grid-cell" />
-                <ui:VisualElement name="cell-0-3" class="grid-cell" />
-                <ui:VisualElement name="cell-0-4" class="grid-cell" />
+                <ui:VisualElement name="cell-0-0" class="grid-cell" style="background-color: rgb(39, 190, 48);">
+                    <ui:Label text="C" name="Label" style="width: 49px; height: 50px; -unity-text-align: middle-center; font-size: 32px; -unity-font-style: bold;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="cell-0-1" class="grid-cell" style="background-color: rgb(236, 216, 34);">
+                    <ui:Label text="A" style="width: 49px; height: 50px; -unity-text-align: middle-center; font-size: 32px; -unity-font-style: bold; -unity-background-image-tint-color: rgb(255, 255, 255);" />
+                </ui:VisualElement>
+                <ui:VisualElement name="cell-0-2" class="grid-cell" style="background-color: rgb(224, 216, 216);">
+                    <ui:Label text="I" style="width: 49px; height: 50px; -unity-text-align: middle-center; font-size: 32px; -unity-font-style: bold;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="cell-0-3" class="grid-cell" style="background-color: rgb(224, 216, 216);">
+                    <ui:Label text="J" style="width: 49px; height: 50px; -unity-text-align: middle-center; font-size: 32px; -unity-font-style: bold;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="cell-0-4" class="grid-cell" style="background-color: rgb(236, 216, 34);">
+                    <ui:Label text="O" style="width: 49px; height: 50px; -unity-text-align: middle-center; font-size: 32px; -unity-font-style: bold;" />
+                </ui:VisualElement>
             </ui:VisualElement>
             <ui:VisualElement name="grid-row-1" class="grid-row">
-                <ui:VisualElement name="cell-0-0" class="grid-cell" />
-                <ui:VisualElement name="cell-0-1" class="grid-cell" />
-                <ui:VisualElement name="cell-0-2" class="grid-cell" />
-                <ui:VisualElement name="cell-0-3" class="grid-cell" />
-                <ui:VisualElement name="cell-0-4" class="grid-cell" />
+                <ui:VisualElement name="cell-0-0" class="grid-cell" style="background-color: rgb(39, 190, 48);">
+                    <ui:Label text="C" style="width: 49px; height: 50px; -unity-text-align: middle-center; font-size: 32px; -unity-font-style: bold;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="cell-0-1" class="grid-cell" style="background-color: rgb(39, 190, 48);">
+                    <ui:Label text="O" style="width: 49px; height: 50px; -unity-text-align: middle-center; font-size: 32px; -unity-font-style: bold;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="cell-0-2" class="grid-cell" style="background-color: rgb(236, 216, 34);">
+                    <ui:Label text="L" style="width: 49px; height: 50px; -unity-text-align: middle-center; font-size: 32px; -unity-font-style: bold;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="cell-0-3" class="grid-cell" style="background-color: rgb(39, 190, 48);">
+                    <ui:Label text="A" style="width: 49px; height: 50px; -unity-text-align: middle-center; font-size: 32px; -unity-font-style: bold;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="cell-0-4" class="grid-cell" style="background-color: rgb(236, 216, 34);">
+                    <ui:Label text="R" style="width: 49px; height: 50px; -unity-text-align: middle-center; font-size: 32px; -unity-font-style: bold;" />
+                </ui:VisualElement>
             </ui:VisualElement>
             <ui:VisualElement name="grid-row-2" class="grid-row">
                 <ui:VisualElement name="cell-0-0" class="grid-cell" />
@@ -54,7 +75,7 @@
         </ui:VisualElement>
         <ui:VisualElement name="game-controls" class="game-controls-container" style="bottom: -42px; width: 540px; height: 6%;">
             <ui:Button name="hint-button" class="button button--secondary button--with-icon" style="bottom: -12px;">
-                <ui:VisualElement name="hint-icon" class="icon icon--hint" />
+                <ui:VisualElement name="hint-icon" class="icon icon--hint" style="background-image: url(&quot;project://database/Assets/Images/Lampada.png?fileID=2800000&amp;guid=fb6e6091b8f9cad4a9ec0fa060c512ff&amp;type=3#Lampada&quot;); height: 42px; width: 32px;" />
                 <ui:Label text="Dica" style="font-size: 22px;" />
             </ui:Button>
             <ui:Button name="new-game-button" class="button button--secondary button--with-icon" style="bottom: -12px;">
