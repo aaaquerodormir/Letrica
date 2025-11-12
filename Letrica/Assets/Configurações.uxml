@@ -1,17 +1,45 @@
 <ui:UXML xmlns="UnityEngine.UIElements" xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
     <Style src="project://database/Assets/StyleMenu.uss?fileID=7433441132597879392&amp;guid=a0a0dcf309dba5a4baf3ca0e399ca5d6&amp;type=3#StyleMenu" />
     <ui:VisualElement name="main-config-container" class="root-container" style="background-color: rgb(255, 235, 211);">
-        <ui:VisualElement name="header-container" class="header-container" style="flex-direction: row;">
-            <ui:VisualElement name="footer-container" class="footer-container">
-                <ui:Button name="home-button" class="game-button game-button--sudoku" style="height: 85px; width: 200px; background-color: rgb(245, 239, 227); border-top-width: 4px; border-right-width: 4px; border-bottom-width: 4px; border-left-width: 4px; border-left-color: rgb(217, 205, 191); border-right-color: rgb(217, 205, 191); border-top-color: rgb(217, 205, 191); border-bottom-color: rgb(217, 205, 191); flex-direction: column-reverse; align-items: center;">
-                    <ui:Label text="MENU" name="Label" style="-unity-font-definition: url(&quot;project://database/Library/unity%20default%20resources?fileID=10102&amp;guid=0000000000000000e000000000000000&amp;type=0#LegacyRuntime&quot;); font-size: 26px; -unity-text-align: upper-center; color: rgb(74, 63, 53); -unity-font-style: bold; -unity-background-image-tint-color: rgb(245, 239, 227);" />
-                </ui:Button>
-            </ui:VisualElement>
-            <ui:Label text="CONFIGURAÇÕES" name="main-title" class="title-h1" style="-unity-font-definition: url(&quot;project://database/Library/unity%20default%20resources?fileID=10102&amp;guid=0000000000000000e000000000000000&amp;type=0#LegacyRuntime&quot;); font-size: 60px;" />
+        <ui:VisualElement name="header-container" style="flex-direction: row; width: 504px; align-items: center; justify-content: center; margin-bottom: 30px; margin-top: 30px;">
+            <ui:Button name="home-button" style="position: absolute; left: -2px; width: 120px; height: 50px; background-color: rgb(245, 239, 227); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px; border-color: rgb(217, 205, 191); border-radius: 30px; padding: 5px; flex-direction: row; align-items: center; justify-content: center; margin-left: 0; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; top: -68px;">
+                <ui:Label text="Menu" name="Label" style="font-size: 22px; -unity-text-align: middle-center; color: rgb(74, 63, 53); -unity-font-style: bold;" />
+            </ui:Button>
         </ui:VisualElement>
-        <ui:VisualElement name="footer-container" class="footer-container">
-            <ui:Button name="settingss-button" class="game-button game-button--sudoku" style="height: 100px; width: 300px; background-color: rgb(245, 239, 227); border-top-width: 4px; border-right-width: 4px; border-bottom-width: 4px; border-left-width: 4px; border-left-color: rgb(217, 205, 191); border-right-color: rgb(217, 205, 191); border-top-color: rgb(217, 205, 191); border-bottom-color: rgb(217, 205, 191);">
-                <ui:Label text="CONFIGURAÇÕES" name="Label" style="-unity-font-definition: url(&quot;project://database/Library/unity%20default%20resources?fileID=10102&amp;guid=0000000000000000e000000000000000&amp;type=0#LegacyRuntime&quot;); font-size: 26px; -unity-text-align: upper-center; color: rgb(74, 63, 53); -unity-font-style: bold; -unity-background-image-tint-color: rgb(245, 239, 227);" />
+        <ui:Label text="CONFIGURAÇÕES" name="main-title" class="title-h1" style="font-size: 40px; color: rgb(74, 63, 53); -unity-font-style: bold; margin-left: 4px; padding-left: 2px;" />
+        <ui:VisualElement name="space" style="flex-grow: 1; max-height: 30px; width: 450px;" />
+        <ui:VisualElement name="panels-wrapper" style="width: 504px; align-items: stretch; margin-top: 20px;">
+            <ui:VisualElement name="som-container" class="grid-container" style="height: 204px; max-height: 220px; background-color: rgb(255, 255, 255); margin-bottom: 25px; padding: 20px; border-radius: 15px;">
+                <ui:Label text="Som e Vibração" style="font-size: 24px; -unity-font-style: bold; color: rgb(74, 63, 53); margin-bottom: 15px;" />
+                <ui:VisualElement style="flex-direction: row; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                    <ui:Label text="Efeitos sonoros" style="font-size: 22px; color: rgb(74, 63, 53);" />
+                    <ui:Toggle name="toggle-sound" style="-unity-background-image-tint-color: rgb(195, 107, 86); width: 55px; height: 35px;" />
+                </ui:VisualElement>
+                <ui:VisualElement style="flex-direction: row; justify-content: space-between; align-items: center;">
+                    <ui:Label text="Vibração ao tocar" style="font-size: 22px; color: rgb(74, 63, 53);" />
+                    <ui:Toggle name="toggle-vibration" style="-unity-background-image-tint-color: rgb(195, 107, 86); width: 55px; height: 35px;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="aparencia-container" class="grid-container" style="height: 328px; max-height: 321px; background-color: rgb(255, 255, 255); margin-bottom: 25px; padding: 20px; border-radius: 15px; width: 504px;">
+                <ui:Label text="Aparência" style="font-size: 24px; -unity-font-style: bold; color: rgb(74, 63, 53); margin-bottom: 15px;" />
+                <ui:VisualElement style="margin-bottom: 15px;">
+                    <ui:Label text="Tamanho do texto" style="font-size: 22px; color: rgb(138, 127, 115); margin-bottom: 5px;" />
+                    <ui:DropdownField name="text-size-dropdown" value="Normal" style="background-color: rgb(245, 239, 227); border-radius: 8px; padding: 8px; font-size: 18px; color: rgb(74, 63, 53); border-width: 1px; border-color: rgb(217, 205, 191); padding-top: 4px; padding-right: 4px; padding-bottom: 4px; padding-left: -10px;" />
+                </ui:VisualElement>
+                <ui:VisualElement>
+                    <ui:Label text="Modo de cores" style="font-size: 22px; color: rgb(138, 127, 115); margin-bottom: 5px;" />
+                    <ui:DropdownField name="color-mode-dropdown" value="Normal" style="background-color: rgb(245, 239, 227); border-radius: 8px; padding: 8px; font-size: 18px; color: rgb(74, 63, 53); border-width: 1px; border-color: rgb(217, 205, 191); padding-top: 4px; padding-right: 4px; padding-bottom: 4px; padding-left: -10px;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="dica-container" class="grid-container" style="height: 200px; max-height: 220px; background-color: rgb(255, 255, 255); margin-bottom: 30px; padding: 20px; border-radius: 15px;">
+                <ui:Label text="Ajuda no Jogo" style="font-size: 24px; -unity-font-style: bold; color: rgb(74, 63, 53); margin-bottom: 10px;" />
+                <ui:Label text="Use o botão &quot;Dica&quot; durante o jogo para receber ajuda quando precisar. Não há limite de dicas, jogue no seu ritmo!" style="font-size: 22px; color: rgb(138, 127, 115); white-space: normal; -unity-font-style: normal;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="space" style="flex-grow: 1; max-height: 53px; width: 450px;" />
+        <ui:VisualElement name="footer-container" style="margin-bottom: 20px;">
+            <ui:Button name="save-button" style="height: 60px; width: 429px; background-color: rgb(195, 107, 86); color: rgb(255, 255, 255); border-radius: 20px; font-size: 22px; -unity-font-style: bold; border-width: 0;">
+                <ui:Label text="SALVAR CONFIGURAÇÕES" style="font-size: 22px; color: rgb(255, 255, 255); -unity-font-style: bold; -unity-text-align: middle-center;" />
             </ui:Button>
         </ui:VisualElement>
     </ui:VisualElement>
