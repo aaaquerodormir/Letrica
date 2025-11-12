@@ -330,6 +330,9 @@
 
 .grid-container--sudoku {
     padding: 10px;
+    border-top-width: 1px;
+    border-left-width: 1px;
+    border-color: var(--color-grid-line); /* Use a cor da linha padrão */
 }
 
 .sudoku-row {
@@ -339,14 +342,18 @@
 .sudoku-cell {
     width: 40px;
     height: 40px;
-    border-width: 1px;
+    /* REMOVIDO: border-width: 1px; */
+    border-top-width: 0;
+    border-left-width: 0;
+    border-bottom-width: 1px;
+    border-right-width: 1px;
     border-color: var(--color-grid-line);
     align-items: center;
     justify-content: center;
 }
 
 /* *** SEÇÃO CORRIGIDA ***
-  Use estas classes no seu UXML para criar as linhas grossas
+    Use estas classes no seu UXML para criar as linhas grossas
 */
 
 /* Adicione esta classe às células na 3ª e 6ª coluna */
@@ -365,6 +372,8 @@
     font-size: 28px;
     -unity-font-style: bold;
     color: var(--color-text-dark);
+    /* ADICIONE ESTA LINHA: */
+    -unity-text-align: middle-center;
 }
 
 /* Números do usuário (exemplo de classe que você adicionaria via C#) */
