@@ -330,9 +330,9 @@
 
 .grid-container--sudoku {
     padding: 10px;
-    border-top-width: 1px;
-    border-left-width: 1px;
-    border-color: var(--color-grid-line); /* Use a cor da linha padrão */
+    /* Linhas superior e esquerda do container removidas, pois as células as desenham. */
+    border-color: var(--color-grid-line);
+    position: relative; 
 }
 
 .sudoku-row {
@@ -342,9 +342,9 @@
 .sudoku-cell {
     width: 40px;
     height: 40px;
-    /* REMOVIDO: border-width: 1px; */
-    border-top-width: 0;
-    border-left-width: 0;
+    /* CORRIGIDO: Todas as 4 bordas têm 1px para fechar o quadrado. */
+    border-top-width: 1px;    
+    border-left-width: 1px;   
     border-bottom-width: 1px;
     border-right-width: 1px;
     border-color: var(--color-grid-line);
@@ -352,27 +352,71 @@
     justify-content: center;
 }
 
-/* *** SEÇÃO CORRIGIDA ***
-    Use estas classes no seu UXML para criar as linhas grossas
-*/
+/* ===================================================== */
+/* NOVOS ESTILOS PARA LINHAS GROSSAS (ELEMENTOS SEPARADOS) */
+/* ===================================================== */
 
-/* Adicione esta classe às células na 3ª e 6ª coluna */
-.sudoku-cell--border-right {
-    border-right-width: 3px;
-    border-right-color: var(--color-text-dark);
+.sudoku-grid-lines-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* Altura/Largura total do container, incluindo o padding de 10px de cada lado (368px + 20px) */
+    width: 388px; 
+    height: 388px;
+    -unity-z-index: 1; 
 }
 
-/* Adicione esta classe aos VisualElements da 3ª e 6ª linha */
-.sudoku-row--border-bottom .sudoku-cell {
-    border-bottom-width: 3px;
-    border-bottom-color: var(--color-text-dark);
+.sudoku-thick-line {
+    background-color: var(--color-text-dark); /* Cor preta */
+    position: absolute;
+    -unity-z-index: 2;
 }
+
+.sudoku-thick-line--vertical {
+    width: 3px; 
+}
+
+.sudoku-thick-line--horizontal {
+    height: 3px; 
+}
+
+/* ===================================================== */
+/* NOVOS ESTILOS PARA LINHAS GROSSAS (ELEMENTOS SEPARADOS) */
+/* ===================================================== */
+
+/* Contêiner que segura as linhas grossas, deve ser ABSOLUTO no UXML */
+.sudoku-grid-lines-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -unity-z-index: 1; 
+}
+
+/* Estilo base para os VisualElements que atuam como linhas */
+.sudoku-thick-line {
+    background-color: var(--color-text-dark); /* Cor preta */
+    position: absolute;
+    -unity-z-index: 2;
+}
+
+.sudoku-thick-line--vertical {
+    width: 3px; /* Espessura da linha vertical */
+}
+
+.sudoku-thick-line--horizontal {
+    height: 3px; /* Espessura da linha horizontal */
+}
+
+/* ===================================================== */
+/* FIM DOS NOVOS ESTILOS                                 */
+/* ===================================================== */
 
 .cell-number {
     font-size: 28px;
     -unity-font-style: bold;
     color: var(--color-text-dark);
-    /* ADICIONE ESTA LINHA: */
     -unity-text-align: middle-center;
 }
 
