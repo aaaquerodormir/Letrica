@@ -1,14 +1,14 @@
 <ui:UXML xmlns="UnityEngine.UIElements" xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
-    <Style src="project://database/Assets/Style.uss?fileID=7433441132597879392&amp;guid=35a3d0ceb85b0b04284ff54715c4d9b0&amp;type=3#Style" />
+    <Style src="project://database/Assets/TermoStyle.uss?fileID=7433441132597879392&amp;guid=eac2e7999831fcc4088038d0969d6c9c&amp;type=3#TermoStyle" />
     <ui:VisualElement name="termo-screen-container" class="root-container root-container--termo">
         <ui:VisualElement name="game-header" class="game-header">
-            <ui:Button name="menu-button" class="button button--icon button--secondary">
-                <ui:Label text="Menu" />
+            <ui:Button name="menu-button" class="button button--icon button--secondary" style="width: 120px; height: 80px;">
+                <ui:Label text="Menu" style="bottom: -10px; font-size: 22px;" />
             </ui:Button>
-            <ui:Label text="TERMO" name="game-title" class="title-h1" />
+            <ui:Label text="TERMO" name="game-title" class="title-h1" style="left: -20px;" />
             <ui:VisualElement class="header-spacer" />
         </ui:VisualElement>
-        <ui:VisualElement name="grid-container" class="grid-container">
+        <ui:VisualElement name="grid-container" class="grid-container" style="height: 450px; width: 450px;">
             <ui:VisualElement name="grid-row-0" class="grid-row">
                 <ui:VisualElement name="cell-0-0" class="grid-cell" />
                 <ui:VisualElement name="cell-0-1" class="grid-cell" />
@@ -16,24 +16,54 @@
                 <ui:VisualElement name="cell-0-3" class="grid-cell" />
                 <ui:VisualElement name="cell-0-4" class="grid-cell" />
             </ui:VisualElement>
-            <ui:VisualElement name="grid-row-1" class="grid-row" />
-            <ui:VisualElement name="grid-row-2" class="grid-row" />
-            <ui:VisualElement name="grid-row-3" class="grid-row" />
-            <ui:VisualElement name="grid-row-4" class="grid-row" />
-            <ui:VisualElement name="grid-row-5" class="grid-row" />
+            <ui:VisualElement name="grid-row-1" class="grid-row">
+                <ui:VisualElement name="cell-0-0" class="grid-cell" />
+                <ui:VisualElement name="cell-0-1" class="grid-cell" />
+                <ui:VisualElement name="cell-0-2" class="grid-cell" />
+                <ui:VisualElement name="cell-0-3" class="grid-cell" />
+                <ui:VisualElement name="cell-0-4" class="grid-cell" />
+            </ui:VisualElement>
+            <ui:VisualElement name="grid-row-2" class="grid-row">
+                <ui:VisualElement name="cell-0-0" class="grid-cell" />
+                <ui:VisualElement name="cell-0-1" class="grid-cell" />
+                <ui:VisualElement name="cell-0-2" class="grid-cell" />
+                <ui:VisualElement name="cell-0-3" class="grid-cell" />
+                <ui:VisualElement name="cell-0-4" class="grid-cell" />
+            </ui:VisualElement>
+            <ui:VisualElement name="grid-row-3" class="grid-row">
+                <ui:VisualElement name="cell-0-0" class="grid-cell" />
+                <ui:VisualElement name="cell-0-1" class="grid-cell" />
+                <ui:VisualElement name="cell-0-2" class="grid-cell" />
+                <ui:VisualElement name="cell-0-3" class="grid-cell" />
+                <ui:VisualElement name="cell-0-4" class="grid-cell" />
+            </ui:VisualElement>
+            <ui:VisualElement name="grid-row-4" class="grid-row">
+                <ui:VisualElement name="cell-0-0" class="grid-cell" />
+                <ui:VisualElement name="cell-0-1" class="grid-cell" />
+                <ui:VisualElement name="cell-0-2" class="grid-cell" />
+                <ui:VisualElement name="cell-0-3" class="grid-cell" />
+                <ui:VisualElement name="cell-0-4" class="grid-cell" />
+            </ui:VisualElement>
+            <ui:VisualElement name="grid-row-5" class="grid-row">
+                <ui:VisualElement name="cell-0-0" class="grid-cell" />
+                <ui:VisualElement name="cell-0-1" class="grid-cell" />
+                <ui:VisualElement name="cell-0-2" class="grid-cell" />
+                <ui:VisualElement name="cell-0-3" class="grid-cell" />
+                <ui:VisualElement name="cell-0-4" class="grid-cell" />
+            </ui:VisualElement>
         </ui:VisualElement>
-        <ui:VisualElement name="game-controls" class="game-controls-container">
-            <ui:Button name="hint-button" class="button button--secondary button--with-icon">
+        <ui:VisualElement name="game-controls" class="game-controls-container" style="bottom: -42px; width: 540px; height: 6%;">
+            <ui:Button name="hint-button" class="button button--secondary button--with-icon" style="bottom: -12px;">
                 <ui:VisualElement name="hint-icon" class="icon icon--hint" />
-                <ui:Label text="Dica" />
+                <ui:Label text="Dica" style="font-size: 22px;" />
             </ui:Button>
-            <ui:Button name="new-game-button" class="button button--secondary button--with-icon">
+            <ui:Button name="new-game-button" class="button button--secondary button--with-icon" style="bottom: -12px;">
                 <ui:VisualElement name="new-game-icon" class="icon icon--new-game" />
-                <ui:Label text="Nova Partida" />
+                <ui:Label text="Nova Partida" style="font-size: 22px;" />
             </ui:Button>
         </ui:VisualElement>
-        <ui:VisualElement name="keyboard-container" class="keyboard-container">
-            <ui:VisualElement name="keyboard-row-1" class="keyboard-row">
+        <ui:VisualElement name="keyboard-container" class="keyboard-container" style="bottom: -64px;">
+            <ui:VisualElement name="keyboard-row-1" class="keyboard-row" style="-unity-font-style: bold;">
                 <ui:Button text="Q" name="key-Q" class="key" />
                 <ui:Button text="W" name="key-W" class="key" />
                 <ui:Button text="E" name="key-E" class="key" />
@@ -45,7 +75,7 @@
                 <ui:Button text="O" name="key-O" class="key" />
                 <ui:Button text="P" name="key-P" class="key" />
             </ui:VisualElement>
-            <ui:VisualElement name="keyboard-row-2" class="keyboard-row">
+            <ui:VisualElement name="keyboard-row-2" class="keyboard-row" style="-unity-font-style: bold;">
                 <ui:Button text="A" name="key-A" class="key" />
                 <ui:Button text="S" name="key-S" class="key" />
                 <ui:Button text="D" name="key-D" class="key" />
@@ -56,7 +86,7 @@
                 <ui:Button text="K" name="key-K" class="key" />
                 <ui:Button text="L" name="key-L" class="key" />
             </ui:VisualElement>
-            <ui:VisualElement name="keyboard-row-3" class="keyboard-row">
+            <ui:VisualElement name="keyboard-row-3" class="keyboard-row" style="-unity-font-style: bold;">
                 <ui:Button text="Z" name="key-Z" class="key" />
                 <ui:Button text="X" name="key-X" class="key" />
                 <ui:Button text="C" name="key-C" class="key" />
@@ -66,9 +96,9 @@
                 <ui:Button text="M" name="key-M" class="key" />
             </ui:VisualElement>
         </ui:VisualElement>
-        <ui:VisualElement name="action-buttons-container" class="action-buttons-container">
-            <ui:Button text="Apagar" name="backspace-button" class="button button--action" />
-            <ui:Button text="ENVIAR" name="submit-button" class="button button--action button--primary" />
+        <ui:VisualElement name="action-buttons-container" class="action-buttons-container" style="bottom: -89px;">
+            <ui:Button text="Apagar" name="backspace-button" class="button button--action" style="font-size: 22px;" />
+            <ui:Button text="ENVIAR" name="submit-button" class="button button--action button--primary" style="font-size: 22px;" />
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>
