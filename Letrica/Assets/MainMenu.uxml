@@ -1,38 +1,30 @@
-<UXML xmlns="UnityEngine.UIElements" xmlns:ui="UnityEngine.UIElements">
-
-    <VisualElement name="main-menu-container" class="root-container">
-
-        <VisualElement name="header-container" class="header-container">
-            <Label text="Letrica" name="main-title" class="title-h1" />
-            <Label text="JOGOS PARA A MENTE" name="subtitle" class="subtitle" />
-        </VisualElement>
-
-        <VisualElement name="game-select-container" class="game-select-container">
-
-            <Button name="termo-button" class="game-button game-button--termo">
-                <VisualElement name="termo-icon-container" class="icon-container">
-                    <VisualElement name="termo-icon" class="icon icon--brain" />
-                </VisualElement>
-                <Label text="TERMO" class="game-button__title" />
-                <Label text="Adivinhe palavras" class="game-button__description" />
-            </Button>
-
-            <Button name="sudoku-button" class="game-button game-button--sudoku">
-                <VisualElement name="sudoku-icon-container" class="icon-container">
-                    <VisualElement name="sudoku-icon" class="icon icon--grid" />
-                </VisualElement>
-                <Label text="SUDOKU" class="game-button__title" />
-                <Label text="Grade de números" class="game-button__description" />
-            </Button>
-
-        </VisualElement>
-
-        <VisualElement name="footer-container" class="footer-container">
-            <Button name="settings-button" class="button button--secondary button--with-icon">
-                <VisualElement name="settings-icon" class="icon icon--settings" />
-                <Label text="Configurações" />
-            </Button>
-        </VisualElement>
-
-    </VisualElement>
-</UXML>
+<ui:UXML xmlns="UnityEngine.UIElements" xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/StyleMenu.uss?fileID=7433441132597879392&amp;guid=a0a0dcf309dba5a4baf3ca0e399ca5d6&amp;type=3#StyleMenu" />
+    <ui:VisualElement name="main-menu-container" class="root-container" style="background-color: rgb(255, 235, 211);">
+        <ui:VisualElement name="header-container" class="header-container">
+            <ui:Label text="LETRICA" name="main-title" class="title-h1" style="-unity-font-definition: url(&quot;project://database/Library/unity%20default%20resources?fileID=10102&amp;guid=0000000000000000e000000000000000&amp;type=0#LegacyRuntime&quot;); font-size: 60px;" />
+            <ui:Label text="JOGOS PARA A MENTE" name="subtitle" class="subtitle" style="-unity-font-definition: url(&quot;project://database/Library/unity%20default%20resources?fileID=10102&amp;guid=0000000000000000e000000000000000&amp;type=0#LegacyRuntime&quot;); font-size: 22px; -unity-font-style: bold;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="game-select-container" class="game-select-container">
+            <ui:Button name="termo-button" class="game-button game-button--termo" style="height: 259px;">
+                <ui:VisualElement name="termo-icon-container" class="icon-container">
+                    <ui:VisualElement name="termo-icon" class="icon icon--brain" style="background-image: url(&quot;project://database/Assets/Images/C%C3%A9rebro.png?fileID=2800000&amp;guid=041e6444d9c96c44ab43b9a2bc0cbef7&amp;type=3#Cérebro&quot;); -unity-background-image-tint-color: rgb(255, 5, 5); background-color: rgba(255, 0, 0, 0); height: 60px; width: 60px;" />
+                </ui:VisualElement>
+                <ui:Label text="TERMO" class="game-button__title" style="font-size: 28px;" />
+                <ui:Label text="Adivinhe palavras" class="game-button__description" style="font-size: 24px; white-space: normal;" />
+            </ui:Button>
+            <ui:Button name="sudoku-button" class="game-button game-button--sudoku" style="height: 260px;">
+                <ui:VisualElement name="sudoku-icon-container" class="icon-container">
+                    <ui:VisualElement name="sudoku-icon" class="icon icon--grid" style="background-image: url(&quot;project://database/Assets/Images/Palavra.png?fileID=2800000&amp;guid=fd55ea28fb306b041bb8cadfc8463df2&amp;type=3#Palavra&quot;); height: 60px; width: 60px;" />
+                </ui:VisualElement>
+                <ui:Label text="SUDOKU" class="game-button__title" style="font-size: 28px;" />
+                <ui:Label text="Grade de números" class="game-button__description" style="font-size: 24px; white-space: normal; -unity-font-style: normal; -unity-text-align: middle-center;" />
+            </ui:Button>
+        </ui:VisualElement>
+        <ui:VisualElement name="footer-container" class="footer-container">
+            <ui:Button name="settingss-button" class="game-button game-button--sudoku" style="height: 100px; width: 300px; background-color: rgb(245, 239, 227); border-top-width: 4px; border-right-width: 4px; border-bottom-width: 4px; border-left-width: 4px; border-left-color: rgb(217, 205, 191); border-right-color: rgb(217, 205, 191); border-top-color: rgb(217, 205, 191); border-bottom-color: rgb(217, 205, 191);">
+                <ui:Label text="CONFIGURAÇÕES" name="Label" style="-unity-font-definition: url(&quot;project://database/Library/unity%20default%20resources?fileID=10102&amp;guid=0000000000000000e000000000000000&amp;type=0#LegacyRuntime&quot;); font-size: 26px; -unity-text-align: upper-center; color: rgb(74, 63, 53); -unity-font-style: bold; -unity-background-image-tint-color: rgb(245, 239, 227);" />
+            </ui:Button>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
