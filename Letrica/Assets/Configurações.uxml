@@ -2,7 +2,7 @@
     <Style src="project://database/Assets/StyleMenu.uss?fileID=7433441132597879392&amp;guid=a0a0dcf309dba5a4baf3ca0e399ca5d6&amp;type=3#StyleMenu" />
     <ui:VisualElement name="main-config-container" class="root-container" style="background-color: rgb(255, 235, 211);">
         <ui:VisualElement name="header-container" style="flex-direction: row; width: 504px; align-items: center; justify-content: center; margin-bottom: 30px; margin-top: 30px;">
-            <ui:Button name="menu-button" style="position: absolute; left: -2px; width: 120px; height: 50px; background-color: rgb(245, 239, 227); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px; border-color: rgb(217, 205, 191); border-radius: 30px; padding: 5px; flex-direction: row; align-items: center; justify-content: center; margin-left: 0; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; top: -68px;">
+            <ui:Button name="menu-button" style="position: absolute; left: -2px; width: 120px; height: 50px; background-color: rgb(245, 239, 227); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px; border-color: rgb(217, 205, 191); border-radius: 30px; padding: 5px; flex-direction: row; align-items: center; justify-content: center; margin-left: 0; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; top: -48px;">
                 <ui:Label text="Menu" name="Label" style="font-size: 22px; -unity-text-align: middle-center; color: rgb(74, 63, 53); -unity-font-style: bold;" />
             </ui:Button>
         </ui:VisualElement>

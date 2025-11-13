@@ -5,11 +5,11 @@
             <ui:Button name="menu-button" class="button button--icon button--secondary" style="width: 120px; height: 80px;">
                 <ui:Label text="Menu" style="-unity-text-align: middle-center; padding-top: 30px; padding-right: 30px; padding-bottom: 30px; padding-left: 30px; font-size: 22px; top: -1px;" />
             </ui:Button>
-            <ui:Label text="TERMO" name="game-title" class="title-h1" style="left: -10px;" />
+            <ui:Label text="TERMO" name="game-title" class="title-h1" style="left: 25px; align-items: center; right: auto;" />
             <ui:VisualElement class="header-spacer" />
             <ui:VisualElement name="new-game-icon" class="icon icon--new-game" />
         </ui:VisualElement>
-        <ui:VisualElement name="grid-container" class="grid-container" style="height: 450px; width: 450px;">
+        <ui:VisualElement name="grid-container" class="grid-container" style="height: 450px; width: 450px; bottom: auto; top: 20px;">
             <ui:VisualElement name="grid-row-0" class="grid-row">
                 <ui:VisualElement name="cell-0-0" class="grid-cell" style="background-color: rgb(39, 190, 48);">
                     <ui:Label text="C" name="Label" style="width: 49px; height: 50px; -unity-text-align: middle-center; font-size: 32px; -unity-font-style: bold;" />
@@ -116,8 +116,8 @@
             </ui:VisualElement>
         </ui:VisualElement>
         <ui:VisualElement name="action-buttons-container" class="action-buttons-container" style="bottom: -89px;">
-            <ui:Button text="Apagar" name="backspace-button" class="button button--action" style="font-size: 22px;" />
-            <ui:Button text="ENVIAR" name="submit-button" class="button button--action button--primary" style="font-size: 22px;" />
+            <ui:Button text="Apagar" name="backspace-button" class="button button--action" style="font-size: 22px; top: -20px;" />
+            <ui:Button text="ENVIAR" name="submit-button" class="button button--action button--primary" style="font-size: 22px; top: -20px;" />
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>

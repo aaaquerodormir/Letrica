@@ -2,8 +2,10 @@
     <Style src="project://database/Assets/Style.uss?fileID=7433441132597879392&amp;guid=35a3d0ceb85b0b04284ff54715c4d9b0&amp;type=3#Style" />
     <ui:VisualElement class="root-container root-container--sudoku">
         <ui:VisualElement class="game-header">
-            <ui:Button text="Menu" name="menu-button" class="button button--with-icon" />
-            <ui:Label text="SUDOKU" class="title-h1" />
+            <ui:Button name="menu-button" class="button button--icon button--secondary" style="width: 120px; height: 80px;">
+                <ui:Label text="Menu" style="-unity-text-align: middle-center; padding-top: 30px; padding-right: 30px; padding-bottom: 30px; padding-left: 30px; font-size: 22px; top: -1px;" />
+            </ui:Button>
+            <ui:Label text="SUDOKU" class="title-h1" style="align-items: auto; left: -20px;" />
             <ui:VisualElement class="header-spacer" />
         </ui:VisualElement>
         <ui:VisualElement class="game-controls-container">
