@@ -22,7 +22,7 @@
             </ui:Button>
         </ui:VisualElement>
         <ui:VisualElement name="footer-container" class="footer-container">
-            <ui:Button name="settingss-button" class="game-button game-button--sudoku" style="height: 100px; width: 300px; background-color: rgb(245, 239, 227); border-top-width: 4px; border-right-width: 4px; border-bottom-width: 4px; border-left-width: 4px; border-left-color: rgb(217, 205, 191); border-right-color: rgb(217, 205, 191); border-top-color: rgb(217, 205, 191); border-bottom-color: rgb(217, 205, 191);">
+            <ui:Button name="config-button" class="game-button game-button--sudoku" style="height: 100px; width: 300px; background-color: rgb(245, 239, 227); border-top-width: 4px; border-right-width: 4px; border-bottom-width: 4px; border-left-width: 4px; border-left-color: rgb(217, 205, 191); border-right-color: rgb(217, 205, 191); border-top-color: rgb(217, 205, 191); border-bottom-color: rgb(217, 205, 191);">
                 <ui:Label text="CONFIGURAÇÕES" name="Label" style="-unity-font-definition: url(&quot;project://database/Library/unity%20default%20resources?fileID=10102&amp;guid=0000000000000000e000000000000000&amp;type=0#LegacyRuntime&quot;); font-size: 26px; -unity-text-align: upper-center; color: rgb(74, 63, 53); -unity-font-style: bold; -unity-background-image-tint-color: rgb(245, 239, 227);" />
             </ui:Button>
         </ui:VisualElement>
