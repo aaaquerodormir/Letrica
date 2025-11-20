@@ -17,8 +17,8 @@ public class UIManager : MonoBehaviour
 
     // --- Referências para os Scripts de Lógica ---
     private TermoGameController termoController;
-    // private SudokuGameController sudokuController;
-    // private ConfigController configController;
+    private SudokuGameController sudokuController;
+    //private ConfigController configController;
 
     void Awake()
     {
@@ -27,12 +27,12 @@ public class UIManager : MonoBehaviour
         root = uiDocument.rootVisualElement;
 
         termoController = GetComponent<TermoGameController>();
-        // sudokuController = GetComponent<SudokuGameController>();
+         sudokuController = GetComponent<SudokuGameController>();
         // configController = GetComponent<ConfigController>();
 
         // Desliga todos os scripts de lógica por padrão
         if (termoController != null) termoController.enabled = false;
-        // if (sudokuController != null) sudokuController.enabled = false;
+        if (sudokuController != null) sudokuController.enabled = false;
         // if (configController != null) configController.enabled = false;
     }
 
@@ -50,7 +50,7 @@ public class UIManager : MonoBehaviour
 
         // 2. Desliga todos os scripts de lógica (para garantir)
         if (termoController != null) termoController.enabled = false;
-        // if (sudokuController != null) sudokuController.enabled = false;
+        if (sudokuController != null) sudokuController.enabled = false;
         // if (configController != null) configController.enabled = false;
 
         // 3. "Clona" (desenha) o novo UXML na tela
@@ -69,7 +69,7 @@ public class UIManager : MonoBehaviour
         else if (uxml == uxmlSudoku)
         {
             RegisterBackButton(uxmlMainMenu);
-            // if (sudokuController != null) sudokuController.enabled = true; // ACORDA o script do Sudoku
+             if (sudokuController != null) sudokuController.enabled = true; // ACORDA o script do Sudoku
         }
         else if (uxml == uxmlConfiguracoes)
         {

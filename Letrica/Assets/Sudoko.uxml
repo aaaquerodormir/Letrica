@@ -1,290 +1,292 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEngine.UIElements.Editor" editor-extension-mode="False">
     <Style src="project://database/Assets/Style.uss?fileID=7433441132597879392&amp;guid=35a3d0ceb85b0b04284ff54715c4d9b0&amp;type=3#Style" />
-    <ui:VisualElement class="root-container">
-        <ui:VisualElement class="header-top">
-            <ui:Button text="Menu" class="button-rounded button-small" style="width: 171px;" />
-            <ui:Button text="Dica" class="button-rounded" />
-            <ui:Button text="Nova Partida" class="button-rounded" />
+    <ui:VisualElement name="sudoku-screen-container" class="root-container">
+        <ui:VisualElement name="game-header" class="header-top" style="top: 80px; height: 248px; width: 1200px; right: 0; left: 50px; position: relative;">
+            <ui:Button text="Menu" name="menu-button" class="button-rounded button-small" style="width: 240px; height: 160px; font-size: 60px; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0.15);" />
+            <ui:Button text="Nova Partida" class="button-rounded" style="width: 480px; height: 160px; font-size: 60px; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0.15);" />
+            <ui:Button text="Dica" class="button-rounded" style="width: 240px; height: 160px; font-size: 60px; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0.15);" />
             <ui:VisualElement style="width: 60px;" />
         </ui:VisualElement>
-        <ui:VisualElement name="sudoku-grid-container" class="sudoku-main-board" style="max-width: none; width: 1080px; height: 1100px;">
-            <ui:VisualElement class="sudoku-block">
-                <ui:VisualElement class="sudoku-cell">
+        <ui:VisualElement name="sudoku-grid-container" class="sudoku-main-board" style="max-width: none; width: 1180px; height: 1100px;">
+            <ui:VisualElement name="block-1" class="sudoku-block" style="border-left-color: rgb(74, 74, 74); border-right-color: rgb(74, 74, 74); border-top-color: rgb(74, 74, 74); border-bottom-color: rgb(74, 74, 74);">
+                <ui:VisualElement name="cell-1" class="sudoku-cell" style="border-left-color: rgb(74, 74, 74); border-right-color: rgb(74, 74, 74); border-top-color: rgb(74, 74, 74); border-bottom-color: rgb(74, 74, 74); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px;">
                     <ui:Label text="5" class="cell-text" style="font-size: 60px;" />
                 </ui:VisualElement>
-                <ui:VisualElement class="sudoku-cell">
-                    <ui:Label text="3" class="cell-text" style="font-size: 60px;" />
+                <ui:VisualElement name="cell-2" class="sudoku-cell" style="border-left-color: rgb(74, 74, 74); border-right-color: rgb(74, 74, 74); border-top-color: rgb(74, 74, 74); border-bottom-color: rgb(74, 74, 74); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px;">
+                    <ui:Label text="3" class="cell-text" style="font-size: 60px; border-left-color: rgba(74, 74, 74, 0); border-right-color: rgba(74, 74, 74, 0); border-top-color: rgba(74, 74, 74, 0); border-bottom-color: rgba(74, 74, 74, 0);" />
                 </ui:VisualElement>
-                <ui:VisualElement class="sudoku-cell">
+                <ui:VisualElement name="cell-3" class="sudoku-cell" style="border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px; border-left-color: rgb(74, 74, 74); border-right-color: rgb(74, 74, 74); border-top-color: rgb(74, 74, 74); border-bottom-color: rgb(74, 74, 74);">
                     <ui:Label class="cell-text" />
                 </ui:VisualElement>
-                <ui:VisualElement class="sudoku-cell">
+                <ui:VisualElement name="cell-4" class="sudoku-cell" style="border-left-color: rgb(74, 74, 74); border-right-color: rgb(74, 74, 74); border-top-color: rgb(74, 74, 74); border-bottom-color: rgb(74, 74, 74); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px;">
                     <ui:Label text="6" class="cell-text" style="font-size: 60px;" />
                 </ui:VisualElement>
-                <ui:VisualElement class="sudoku-cell">
+                <ui:VisualElement name="cell-5" class="sudoku-cell" style="border-left-color: rgb(74, 74, 74); border-right-color: rgb(74, 74, 74); border-top-color: rgb(74, 74, 74); border-bottom-color: rgb(74, 74, 74); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px;">
                     <ui:Label class="cell-text" />
                 </ui:VisualElement>
-                <ui:VisualElement class="sudoku-cell">
+                <ui:VisualElement name="cell-6" class="sudoku-cell" style="border-left-color: rgb(74, 74, 74); border-right-color: rgb(74, 74, 74); border-top-color: rgb(74, 74, 74); border-bottom-color: rgb(74, 74, 74); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px;">
                     <ui:Label class="cell-text" />
                 </ui:VisualElement>
-                <ui:VisualElement class="sudoku-cell">
+                <ui:VisualElement name="cell-7" class="sudoku-cell" style="border-left-color: rgb(74, 74, 74); border-right-color: rgb(74, 74, 74); border-top-color: rgb(74, 74, 74); border-bottom-color: rgb(74, 74, 74); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px;">
                     <ui:Label text="9" class="cell-text" style="font-size: 60px;" />
                 </ui:VisualElement>
-                <ui:VisualElement class="sudoku-cell">
+                <ui:VisualElement name="cell-8" class="sudoku-cell" style="border-left-color: rgb(74, 74, 74); border-right-color: rgb(74, 74, 74); border-top-color: rgb(74, 74, 74); border-bottom-color: rgb(74, 74, 74); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px;">
                     <ui:Label text="8" class="cell-text" style="font-size: 60px;" />
                 </ui:VisualElement>
-                <ui:VisualElement class="sudoku-cell">
+                <ui:VisualElement name="cell-9" class="sudoku-cell" style="border-left-color: rgb(74, 74, 74); border-right-color: rgb(74, 74, 74); border-top-color: rgb(74, 74, 74); border-bottom-color: rgb(74, 74, 74); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px;">
                     <ui:Label class="cell-text" />
                 </ui:VisualElement>
             </ui:VisualElement>
-            <ui:VisualElement class="sudoku-block">
-                <ui:VisualElement class="sudoku-cell">
+            <ui:VisualElement name="block-2" class="sudoku-block" style="border-left-color: rgb(74, 74, 74); border-right-color: rgb(74, 74, 74); border-top-color: rgb(74, 74, 74); border-bottom-color: rgb(74, 74, 74);">
+                <ui:VisualElement name="cell-1" class="sudoku-cell" style="border-left-color: rgb(74, 74, 74); border-right-color: rgb(74, 74, 74); border-top-color: rgb(74, 74, 74); border-bottom-color: rgb(74, 74, 74); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px;">
                     <ui:Label class="cell-text" />
                 </ui:VisualElement>
-                <ui:VisualElement class="sudoku-cell">
+                <ui:VisualElement name="cell-2" class="sudoku-cell" style="border-left-color: rgb(74, 74, 74); border-right-color: rgb(74, 74, 74); border-top-color: rgb(74, 74, 74); border-bottom-color: rgb(74, 74, 74); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px;">
                     <ui:Label text="7" class="cell-text" style="font-size: 60px;" />
                 </ui:VisualElement>
-                <ui:VisualElement class="sudoku-cell">
+                <ui:VisualElement name="cell-3" class="sudoku-cell" style="border-left-color: rgb(74, 74, 74); border-right-color: rgb(74, 74, 74); border-top-color: rgb(74, 74, 74); border-bottom-color: rgb(74, 74, 74); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px;">
                     <ui:Label class="cell-text" />
                 </ui:VisualElement>
-                <ui:VisualElement class="sudoku-cell">
+                <ui:VisualElement name="cell-4" class="sudoku-cell" style="border-left-color: rgb(74, 74, 74); border-right-color: rgb(74, 74, 74); border-top-color: rgb(74, 74, 74); border-bottom-color: rgb(74, 74, 74); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px;">
                     <ui:Label text="1" class="cell-text" style="font-size: 60px;" />
                 </ui:VisualElement>
-                <ui:VisualElement class="sudoku-cell">
+                <ui:VisualElement name="cell-5" class="sudoku-cell" style="border-left-color: rgb(74, 74, 74); border-right-color: rgb(74, 74, 74); border-top-color: rgb(74, 74, 74); border-bottom-color: rgb(74, 74, 74); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px;">
                     <ui:Label text="9" class="cell-text" style="font-size: 60px;" />
                 </ui:VisualElement>
-                <ui:VisualElement class="sudoku-cell">
+                <ui:VisualElement name="cell-6" class="sudoku-cell" style="border-left-color: rgb(74, 74, 74); border-right-color: rgb(74, 74, 74); border-top-color: rgb(74, 74, 74); border-bottom-color: rgb(74, 74, 74); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px;">
                     <ui:Label text="5" class="cell-text" style="font-size: 60px;" />
                 </ui:VisualElement>
-                <ui:VisualElement class="sudoku-cell">
+                <ui:VisualElement name="cell-7" class="sudoku-cell" style="border-left-color: rgb(74, 74, 74); border-right-color: rgb(74, 74, 74); border-top-color: rgb(74, 74, 74); border-bottom-color: rgb(74, 74, 74); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px;">
                     <ui:Label class="cell-text" />
                 </ui:VisualElement>
-                <ui:VisualElement class="sudoku-cell">
+                <ui:VisualElement name="cell-8" class="sudoku-cell" style="border-left-color: rgb(74, 74, 74); border-right-color: rgb(74, 74, 74); border-top-color: rgb(74, 74, 74); border-bottom-color: rgb(74, 74, 74); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px;">
                     <ui:Label class="cell-text" />
                 </ui:VisualElement>
-                <ui:VisualElement class="sudoku-cell">
+                <ui:VisualElement name="cell-9" class="sudoku-cell" style="border-left-color: rgb(74, 74, 74); border-right-color: rgb(74, 74, 74); border-top-color: rgb(74, 74, 74); border-bottom-color: rgb(74, 74, 74); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px;">
                     <ui:Label class="cell-text" />
                 </ui:VisualElement>
             </ui:VisualElement>
-            <ui:VisualElement class="sudoku-block">
-                <ui:VisualElement class="sudoku-cell">
+            <ui:VisualElement name="block-3" class="sudoku-block">
+                <ui:VisualElement name="cell-1" class="sudoku-cell" style="border-left-color: rgb(74, 74, 74); border-right-color: rgb(74, 74, 74); border-top-color: rgb(74, 74, 74); border-bottom-color: rgb(74, 74, 74); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px;">
                     <ui:Label class="cell-text" />
                 </ui:VisualElement>
-                <ui:VisualElement class="sudoku-cell">
+                <ui:VisualElement name="cell-2" class="sudoku-cell" style="border-left-color: rgb(74, 74, 74); border-right-color: rgb(74, 74, 74); border-top-color: rgb(74, 74, 74); border-bottom-color: rgb(74, 74, 74); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px;">
                     <ui:Label class="cell-text" />
                 </ui:VisualElement>
-                <ui:VisualElement class="sudoku-cell">
+                <ui:VisualElement name="cell-3" class="sudoku-cell" style="border-left-color: rgb(74, 74, 74); border-right-color: rgb(74, 74, 74); border-top-color: rgb(74, 74, 74); border-bottom-color: rgb(74, 74, 74); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px;">
                     <ui:Label class="cell-text" />
                 </ui:VisualElement>
-                <ui:VisualElement class="sudoku-cell">
+                <ui:VisualElement name="cell-4" class="sudoku-cell" style="border-left-color: rgb(74, 74, 74); border-right-color: rgb(74, 74, 74); border-top-color: rgb(74, 74, 74); border-bottom-color: rgb(74, 74, 74); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px;">
                     <ui:Label class="cell-text" />
                 </ui:VisualElement>
-                <ui:VisualElement class="sudoku-cell">
+                <ui:VisualElement name="cell-5" class="sudoku-cell" style="border-left-color: rgb(74, 74, 74); border-right-color: rgb(74, 74, 74); border-top-color: rgb(74, 74, 74); border-bottom-color: rgb(74, 74, 74); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px;">
                     <ui:Label text="6" class="cell-text" style="font-size: 60px;" />
                 </ui:VisualElement>
-                <ui:VisualElement class="sudoku-cell">
+                <ui:VisualElement name="cell-6" class="sudoku-cell" style="border-left-color: rgb(74, 74, 74); border-right-color: rgb(74, 74, 74); border-top-color: rgb(74, 74, 74); border-bottom-color: rgb(74, 74, 74); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px;">
                     <ui:Label class="cell-text" />
                 </ui:VisualElement>
-                <ui:VisualElement class="sudoku-cell">
+                <ui:VisualElement name="cell-7" class="sudoku-cell" style="border-left-color: rgb(74, 74, 74); border-right-color: rgb(74, 74, 74); border-top-color: rgb(74, 74, 74); border-bottom-color: rgb(74, 74, 74); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px;">
                     <ui:Label text="8" class="cell-text" style="font-size: 60px;" />
                 </ui:VisualElement>
-                <ui:VisualElement class="sudoku-cell">
+                <ui:VisualElement name="cell-8" class="sudoku-cell" style="border-left-color: rgb(74, 74, 74); border-right-color: rgb(74, 74, 74); border-top-color: rgb(74, 74, 74); border-bottom-color: rgb(74, 74, 74); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px;">
                     <ui:Label class="cell-text" />
                 </ui:VisualElement>
-                <ui:VisualElement class="sudoku-cell">
+                <ui:VisualElement name="cell-9" class="sudoku-cell" style="border-left-color: rgb(74, 74, 74); border-right-color: rgb(74, 74, 74); border-top-color: rgb(74, 74, 74); border-bottom-color: rgb(74, 74, 74); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px;">
                     <ui:Label text="3" class="cell-text" style="font-size: 60px;" />
                 </ui:VisualElement>
             </ui:VisualElement>
-            <ui:VisualElement class="sudoku-block">
-                <ui:VisualElement class="sudoku-cell">
+            <ui:VisualElement name="block-4" class="sudoku-block">
+                <ui:VisualElement name="cell-1" class="sudoku-cell" style="border-left-color: rgb(74, 74, 74); border-right-color: rgb(74, 74, 74); border-top-color: rgb(74, 74, 74); border-bottom-color: rgb(74, 74, 74); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px;">
                     <ui:Label text="8" class="cell-text" style="font-size: 60px;" />
                 </ui:VisualElement>
-                <ui:VisualElement class="sudoku-cell">
+                <ui:VisualElement name="cell-2" class="sudoku-cell" style="border-left-color: rgb(74, 74, 74); border-right-color: rgb(74, 74, 74); border-top-color: rgb(74, 74, 74); border-bottom-color: rgb(74, 74, 74); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px;">
                     <ui:Label class="cell-text" />
                 </ui:VisualElement>
-                <ui:VisualElement class="sudoku-cell">
+                <ui:VisualElement name="cell-3" class="sudoku-cell" style="border-left-color: rgb(74, 74, 74); border-right-color: rgb(74, 74, 74); border-top-color: rgb(74, 74, 74); border-bottom-color: rgb(74, 74, 74); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px;">
                     <ui:Label class="cell-text" />
                 </ui:VisualElement>
-                <ui:VisualElement class="sudoku-cell">
+                <ui:VisualElement name="cell-4" class="sudoku-cell" style="border-left-color: rgb(74, 74, 74); border-right-color: rgb(74, 74, 74); border-top-color: rgb(74, 74, 74); border-bottom-color: rgb(74, 74, 74); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px;">
                     <ui:Label text="4" class="cell-text" style="font-size: 60px;" />
                 </ui:VisualElement>
-                <ui:VisualElement class="sudoku-cell">
+                <ui:VisualElement name="cell-5" class="sudoku-cell" style="border-left-color: rgb(74, 74, 74); border-right-color: rgb(74, 74, 74); border-top-color: rgb(74, 74, 74); border-bottom-color: rgb(74, 74, 74); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px;">
                     <ui:Label class="cell-text" />
                 </ui:VisualElement>
-                <ui:VisualElement class="sudoku-cell">
+                <ui:VisualElement name="cell-6" class="sudoku-cell" style="border-left-color: rgb(74, 74, 74); border-right-color: rgb(74, 74, 74); border-top-color: rgb(74, 74, 74); border-bottom-color: rgb(74, 74, 74); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px;">
                     <ui:Label class="cell-text" />
                 </ui:VisualElement>
-                <ui:VisualElement class="sudoku-cell">
+                <ui:VisualElement name="cell-7" class="sudoku-cell" style="border-left-color: rgb(74, 74, 74); border-right-color: rgb(74, 74, 74); border-top-color: rgb(74, 74, 74); border-bottom-color: rgb(74, 74, 74); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px;">
                     <ui:Label text="7" class="cell-text" style="font-size: 60px;" />
                 </ui:VisualElement>
-                <ui:VisualElement class="sudoku-cell">
+                <ui:VisualElement name="cell-8" class="sudoku-cell" style="border-left-color: rgb(74, 74, 74); border-right-color: rgb(74, 74, 74); border-top-color: rgb(74, 74, 74); border-bottom-color: rgb(74, 74, 74); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px;">
                     <ui:Label class="cell-text" />
                 </ui:VisualElement>
-                <ui:VisualElement class="sudoku-cell">
+                <ui:VisualElement name="cell-9" class="sudoku-cell" style="border-left-color: rgb(74, 74, 74); border-right-color: rgb(74, 74, 74); border-top-color: rgb(74, 74, 74); border-bottom-color: rgb(74, 74, 74); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px;">
                     <ui:Label class="cell-text" />
                 </ui:VisualElement>
             </ui:VisualElement>
-            <ui:VisualElement class="sudoku-block">
-                <ui:VisualElement class="sudoku-cell">
+            <ui:VisualElement name="block-5" class="sudoku-block" style="border-left-color: rgb(74, 74, 74); border-right-color: rgb(74, 74, 74); border-top-color: rgb(74, 74, 74); border-bottom-color: rgb(74, 74, 74);">
+                <ui:VisualElement name="cell-1" class="sudoku-cell" style="border-left-color: rgb(74, 74, 74); border-right-color: rgb(74, 74, 74); border-top-color: rgb(74, 74, 74); border-bottom-color: rgb(74, 74, 74); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px;">
                     <ui:Label class="cell-text" />
                 </ui:VisualElement>
-                <ui:VisualElement class="sudoku-cell">
+                <ui:VisualElement name="cell-2" class="sudoku-cell" style="border-left-color: rgb(74, 74, 74); border-right-color: rgb(74, 74, 74); border-top-color: rgb(74, 74, 74); border-bottom-color: rgb(74, 74, 74); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px;">
                     <ui:Label text="6" class="cell-text" style="font-size: 60px;" />
                 </ui:VisualElement>
-                <ui:VisualElement class="sudoku-cell">
+                <ui:VisualElement name="cell-3" class="sudoku-cell" style="border-left-color: rgb(74, 74, 74); border-right-color: rgb(74, 74, 74); border-top-color: rgb(74, 74, 74); border-bottom-color: rgb(74, 74, 74); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px;">
                     <ui:Label class="cell-text" />
                 </ui:VisualElement>
-                <ui:VisualElement class="sudoku-cell">
+                <ui:VisualElement name="cell-4" class="sudoku-cell" style="border-left-color: rgb(74, 74, 74); border-right-color: rgb(74, 74, 74); border-top-color: rgb(74, 74, 74); border-bottom-color: rgb(74, 74, 74); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px;">
                     <ui:Label text="8" class="cell-text" style="font-size: 60px;" />
                 </ui:VisualElement>
-                <ui:VisualElement class="sudoku-cell">
+                <ui:VisualElement name="cell-5" class="sudoku-cell" style="border-left-color: rgb(74, 74, 74); border-right-color: rgb(74, 74, 74); border-top-color: rgb(74, 74, 74); border-bottom-color: rgb(74, 74, 74); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px;">
                     <ui:Label class="cell-text" />
                 </ui:VisualElement>
-                <ui:VisualElement class="sudoku-cell">
+                <ui:VisualElement name="cell-6" class="sudoku-cell" style="border-left-color: rgb(74, 74, 74); border-right-color: rgb(74, 74, 74); border-top-color: rgb(74, 74, 74); border-bottom-color: rgb(74, 74, 74); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px;">
                     <ui:Label text="3" class="cell-text" style="font-size: 60px;" />
                 </ui:VisualElement>
-                <ui:VisualElement class="sudoku-cell">
+                <ui:VisualElement name="cell-7" class="sudoku-cell" style="border-left-color: rgb(74, 74, 74); border-right-color: rgb(74, 74, 74); border-top-color: rgb(74, 74, 74); border-bottom-color: rgb(74, 74, 74); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px;">
                     <ui:Label class="cell-text" />
                 </ui:VisualElement>
-                <ui:VisualElement class="sudoku-cell">
+                <ui:VisualElement name="cell-8" class="sudoku-cell" style="border-left-color: rgb(74, 74, 74); border-right-color: rgb(74, 74, 74); border-top-color: rgb(74, 74, 74); border-bottom-color: rgb(74, 74, 74); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px;">
                     <ui:Label text="2" class="cell-text" style="font-size: 60px;" />
                 </ui:VisualElement>
-                <ui:VisualElement class="sudoku-cell">
+                <ui:VisualElement name="cell-9" class="sudoku-cell" style="border-left-color: rgb(74, 74, 74); border-right-color: rgb(74, 74, 74); border-top-color: rgb(74, 74, 74); border-bottom-color: rgb(74, 74, 74); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px;">
                     <ui:Label class="cell-text" />
                 </ui:VisualElement>
             </ui:VisualElement>
-            <ui:VisualElement class="sudoku-block">
-                <ui:VisualElement class="sudoku-cell">
+            <ui:VisualElement name="block-6" class="sudoku-block" style="border-left-color: rgb(74, 74, 74); border-right-color: rgb(74, 74, 74); border-top-color: rgb(74, 74, 74); border-bottom-color: rgb(74, 74, 74);">
+                <ui:VisualElement name="cell-1" class="sudoku-cell" style="border-left-color: rgb(74, 74, 74); border-right-color: rgb(74, 74, 74); border-top-color: rgb(74, 74, 74); border-bottom-color: rgb(74, 74, 74); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px;">
                     <ui:Label class="cell-text" />
                 </ui:VisualElement>
-                <ui:VisualElement class="sudoku-cell">
+                <ui:VisualElement name="cell-2" class="sudoku-cell" style="border-left-color: rgb(74, 74, 74); border-right-color: rgb(74, 74, 74); border-top-color: rgb(74, 74, 74); border-bottom-color: rgb(74, 74, 74); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px;">
                     <ui:Label class="cell-text" />
                 </ui:VisualElement>
-                <ui:VisualElement class="sudoku-cell">
+                <ui:VisualElement name="cell-3" class="sudoku-cell" style="border-left-color: rgb(74, 74, 74); border-right-color: rgb(74, 74, 74); border-top-color: rgb(74, 74, 74); border-bottom-color: rgb(74, 74, 74); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px;">
                     <ui:Label text="3" class="cell-text" style="font-size: 60px;" />
                 </ui:VisualElement>
-                <ui:VisualElement class="sudoku-cell">
+                <ui:VisualElement name="cell-4" class="sudoku-cell" style="border-left-color: rgb(74, 74, 74); border-right-color: rgb(74, 74, 74); border-top-color: rgb(74, 74, 74); border-bottom-color: rgb(74, 74, 74); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px;">
                     <ui:Label class="cell-text" />
                 </ui:VisualElement>
-                <ui:VisualElement class="sudoku-cell">
+                <ui:VisualElement name="cell-5" class="sudoku-cell" style="border-left-color: rgb(74, 74, 74); border-right-color: rgb(74, 74, 74); border-top-color: rgb(74, 74, 74); border-bottom-color: rgb(74, 74, 74); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px;">
                     <ui:Label class="cell-text" />
                 </ui:VisualElement>
-                <ui:VisualElement class="sudoku-cell">
+                <ui:VisualElement name="cell-6" class="sudoku-cell" style="border-left-color: rgb(74, 74, 74); border-right-color: rgb(74, 74, 74); border-top-color: rgb(74, 74, 74); border-bottom-color: rgb(74, 74, 74); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px;">
                     <ui:Label text="1" class="cell-text" style="font-size: 60px;" />
                 </ui:VisualElement>
-                <ui:VisualElement class="sudoku-cell">
+                <ui:VisualElement name="cell-7" class="sudoku-cell" style="border-left-color: rgb(74, 74, 74); border-right-color: rgb(74, 74, 74); border-top-color: rgb(74, 74, 74); border-bottom-color: rgb(74, 74, 74); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px;">
                     <ui:Label class="cell-text" />
                 </ui:VisualElement>
-                <ui:VisualElement class="sudoku-cell">
+                <ui:VisualElement name="cell-8" class="sudoku-cell" style="border-left-color: rgb(74, 74, 74); border-right-color: rgb(74, 74, 74); border-top-color: rgb(74, 74, 74); border-bottom-color: rgb(74, 74, 74); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px;">
                     <ui:Label class="cell-text" />
                 </ui:VisualElement>
-                <ui:VisualElement class="sudoku-cell">
+                <ui:VisualElement name="cell-9" class="sudoku-cell" style="border-left-color: rgb(74, 74, 74); border-right-color: rgb(74, 74, 74); border-top-color: rgb(74, 74, 74); border-bottom-color: rgb(74, 74, 74); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px;">
                     <ui:Label text="6" class="cell-text" style="font-size: 60px;" />
                 </ui:VisualElement>
             </ui:VisualElement>
-            <ui:VisualElement class="sudoku-block">
-                <ui:VisualElement class="sudoku-cell">
+            <ui:VisualElement name="block-7" class="sudoku-block" style="border-left-color: rgb(74, 74, 74); border-right-color: rgb(74, 74, 74); border-top-color: rgb(74, 74, 74); border-bottom-color: rgb(74, 74, 74);">
+                <ui:VisualElement name="cell-1" class="sudoku-cell" style="border-left-color: rgb(74, 74, 74); border-right-color: rgb(74, 74, 74); border-top-color: rgb(74, 74, 74); border-bottom-color: rgb(74, 74, 74); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px;">
                     <ui:Label class="cell-text" />
                 </ui:VisualElement>
-                <ui:VisualElement class="sudoku-cell">
+                <ui:VisualElement name="cell-2" class="sudoku-cell" style="border-left-color: rgb(74, 74, 74); border-right-color: rgb(74, 74, 74); border-top-color: rgb(74, 74, 74); border-bottom-color: rgb(74, 74, 74); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px;">
                     <ui:Label text="6" class="cell-text" style="font-size: 60px;" />
                 </ui:VisualElement>
-                <ui:VisualElement class="sudoku-cell">
+                <ui:VisualElement name="cell-3" class="sudoku-cell" style="border-left-color: rgb(74, 74, 74); border-right-color: rgb(74, 74, 74); border-top-color: rgb(74, 74, 74); border-bottom-color: rgb(74, 74, 74); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px;">
                     <ui:Label class="cell-text" />
                 </ui:VisualElement>
-                <ui:VisualElement class="sudoku-cell">
+                <ui:VisualElement name="cell-4" class="sudoku-cell" style="border-left-color: rgb(74, 74, 74); border-right-color: rgb(74, 74, 74); border-top-color: rgb(74, 74, 74); border-bottom-color: rgb(74, 74, 74); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px;">
                     <ui:Label class="cell-text" />
                 </ui:VisualElement>
-                <ui:VisualElement class="sudoku-cell">
+                <ui:VisualElement name="cell-5" class="sudoku-cell" style="border-left-color: rgb(74, 74, 74); border-right-color: rgb(74, 74, 74); border-top-color: rgb(74, 74, 74); border-bottom-color: rgb(74, 74, 74); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px;">
                     <ui:Label class="cell-text" />
                 </ui:VisualElement>
-                <ui:VisualElement class="sudoku-cell">
+                <ui:VisualElement name="cell-6" class="sudoku-cell" style="border-left-color: rgb(74, 74, 74); border-right-color: rgb(74, 74, 74); border-top-color: rgb(74, 74, 74); border-bottom-color: rgb(74, 74, 74); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px;">
                     <ui:Label class="cell-text" />
                 </ui:VisualElement>
-                <ui:VisualElement class="sudoku-cell">
+                <ui:VisualElement name="cell-7" class="sudoku-cell" style="border-left-color: rgb(74, 74, 74); border-right-color: rgb(74, 74, 74); border-top-color: rgb(74, 74, 74); border-bottom-color: rgb(74, 74, 74); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px;">
                     <ui:Label class="cell-text" />
                 </ui:VisualElement>
-                <ui:VisualElement class="sudoku-cell">
+                <ui:VisualElement name="cell-8" class="sudoku-cell" style="border-left-color: rgb(74, 74, 74); border-right-color: rgb(74, 74, 74); border-top-color: rgb(74, 74, 74); border-bottom-color: rgb(74, 74, 74); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px;">
                     <ui:Label class="cell-text" />
                 </ui:VisualElement>
-                <ui:VisualElement class="sudoku-cell">
+                <ui:VisualElement name="cell-9" class="sudoku-cell" style="border-left-color: rgb(74, 74, 74); border-right-color: rgb(74, 74, 74); border-top-color: rgb(74, 74, 74); border-bottom-color: rgb(74, 74, 74); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px;">
                     <ui:Label class="cell-text" />
                 </ui:VisualElement>
             </ui:VisualElement>
-            <ui:VisualElement class="sudoku-block">
-                <ui:VisualElement class="sudoku-cell">
+            <ui:VisualElement name="block-8" class="sudoku-block" style="border-left-color: rgb(74, 74, 74); border-right-color: rgb(74, 74, 74); border-top-color: rgb(74, 74, 74); border-bottom-color: rgb(74, 74, 74);">
+                <ui:VisualElement name="cell-1" class="sudoku-cell" style="border-left-color: rgb(74, 74, 74); border-right-color: rgb(74, 74, 74); border-top-color: rgb(74, 74, 74); border-bottom-color: rgb(74, 74, 74); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px;">
                     <ui:Label class="cell-text" />
                 </ui:VisualElement>
-                <ui:VisualElement class="sudoku-cell">
+                <ui:VisualElement name="cell-2" class="sudoku-cell" style="border-left-color: rgb(74, 74, 74); border-right-color: rgb(74, 74, 74); border-top-color: rgb(74, 74, 74); border-bottom-color: rgb(74, 74, 74); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px;">
                     <ui:Label class="cell-text" />
                 </ui:VisualElement>
-                <ui:VisualElement class="sudoku-cell">
+                <ui:VisualElement name="cell-3" class="sudoku-cell" style="border-left-color: rgb(74, 74, 74); border-right-color: rgb(74, 74, 74); border-top-color: rgb(74, 74, 74); border-bottom-color: rgb(74, 74, 74); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px;">
                     <ui:Label class="cell-text" />
                 </ui:VisualElement>
-                <ui:VisualElement class="sudoku-cell">
+                <ui:VisualElement name="cell-4" class="sudoku-cell" style="border-left-color: rgb(74, 74, 74); border-right-color: rgb(74, 74, 74); border-top-color: rgb(74, 74, 74); border-bottom-color: rgb(74, 74, 74); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px;">
                     <ui:Label text="4" class="cell-text" style="font-size: 60px;" />
                 </ui:VisualElement>
-                <ui:VisualElement class="sudoku-cell">
+                <ui:VisualElement name="cell-5" class="sudoku-cell" style="border-left-color: rgb(74, 74, 74); border-right-color: rgb(74, 74, 74); border-top-color: rgb(74, 74, 74); border-bottom-color: rgb(74, 74, 74); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px;">
                     <ui:Label text="1" class="cell-text" style="font-size: 60px;" />
                 </ui:VisualElement>
-                <ui:VisualElement class="sudoku-cell">
+                <ui:VisualElement name="cell-6" class="sudoku-cell" style="border-left-color: rgb(74, 74, 74); border-right-color: rgb(74, 74, 74); border-top-color: rgb(74, 74, 74); border-bottom-color: rgb(74, 74, 74); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px;">
                     <ui:Label text="9" class="cell-text" style="font-size: 60px;" />
                 </ui:VisualElement>
-                <ui:VisualElement class="sudoku-cell">
+                <ui:VisualElement name="cell-7" class="sudoku-cell" style="border-left-color: rgb(74, 74, 74); border-right-color: rgb(74, 74, 74); border-top-color: rgb(74, 74, 74); border-bottom-color: rgb(74, 74, 74); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px;">
                     <ui:Label class="cell-text" />
                 </ui:VisualElement>
-                <ui:VisualElement class="sudoku-cell">
+                <ui:VisualElement name="cell-8" class="sudoku-cell" style="border-left-color: rgb(74, 74, 74); border-right-color: rgb(74, 74, 74); border-top-color: rgb(74, 74, 74); border-bottom-color: rgb(74, 74, 74); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px;">
                     <ui:Label text="8" class="cell-text" style="font-size: 60px;" />
                 </ui:VisualElement>
-                <ui:VisualElement class="sudoku-cell">
+                <ui:VisualElement name="cell-9" class="sudoku-cell" style="border-left-color: rgb(74, 74, 74); border-right-color: rgb(74, 74, 74); border-top-color: rgb(74, 74, 74); border-bottom-color: rgb(74, 74, 74); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px;">
                     <ui:Label class="cell-text" />
                 </ui:VisualElement>
             </ui:VisualElement>
-            <ui:VisualElement class="sudoku-block">
-                <ui:VisualElement class="sudoku-cell">
+            <ui:VisualElement name="block-9" class="sudoku-block" style="border-left-color: rgb(74, 74, 74); border-right-color: rgb(74, 74, 74); border-top-color: rgb(74, 74, 74); border-bottom-color: rgb(74, 74, 74);">
+                <ui:VisualElement name="cell-1" class="sudoku-cell" style="border-left-color: rgb(74, 74, 74); border-right-color: rgb(74, 74, 74); border-top-color: rgb(74, 74, 74); border-bottom-color: rgb(74, 74, 74); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px;">
                     <ui:Label text="2" class="cell-text" style="font-size: 60px;" />
                 </ui:VisualElement>
-                <ui:VisualElement class="sudoku-cell">
+                <ui:VisualElement name="cell-2" class="sudoku-cell" style="border-left-color: rgb(74, 74, 74); border-right-color: rgb(74, 74, 74); border-top-color: rgb(74, 74, 74); border-bottom-color: rgb(74, 74, 74); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px;">
                     <ui:Label text="8" class="cell-text" style="font-size: 60px;" />
                 </ui:VisualElement>
-                <ui:VisualElement class="sudoku-cell">
+                <ui:VisualElement name="cell-3" class="sudoku-cell" style="border-left-color: rgb(74, 74, 74); border-right-color: rgb(74, 74, 74); border-top-color: rgb(74, 74, 74); border-bottom-color: rgb(74, 74, 74); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px;">
                     <ui:Label class="cell-text" />
                 </ui:VisualElement>
-                <ui:VisualElement class="sudoku-cell">
+                <ui:VisualElement name="cell-4" class="sudoku-cell" style="border-left-color: rgb(74, 74, 74); border-right-color: rgb(74, 74, 74); border-top-color: rgb(74, 74, 74); border-bottom-color: rgb(74, 74, 74); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px;">
                     <ui:Label class="cell-text" />
                 </ui:VisualElement>
-                <ui:VisualElement class="sudoku-cell">
+                <ui:VisualElement name="cell-5" class="sudoku-cell" style="border-left-color: rgb(74, 74, 74); border-right-color: rgb(74, 74, 74); border-top-color: rgb(74, 74, 74); border-bottom-color: rgb(74, 74, 74); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px;">
                     <ui:Label text="5" class="cell-text" style="font-size: 60px;" />
                 </ui:VisualElement>
-                <ui:VisualElement class="sudoku-cell">
+                <ui:VisualElement name="cell-6" class="sudoku-cell" style="border-left-color: rgb(74, 74, 74); border-right-color: rgb(74, 74, 74); border-top-color: rgb(74, 74, 74); border-bottom-color: rgb(74, 74, 74); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px;">
                     <ui:Label class="cell-text" />
                 </ui:VisualElement>
-                <ui:VisualElement class="sudoku-cell">
+                <ui:VisualElement name="cell-7" class="sudoku-cell" style="border-left-color: rgb(74, 74, 74); border-right-color: rgb(74, 74, 74); border-top-color: rgb(74, 74, 74); border-bottom-color: rgb(74, 74, 74); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px;">
                     <ui:Label class="cell-text" />
                 </ui:VisualElement>
-                <ui:VisualElement class="sudoku-cell">
+                <ui:VisualElement name="cell-8" class="sudoku-cell" style="border-left-color: rgb(74, 74, 74); border-right-color: rgb(74, 74, 74); border-top-color: rgb(74, 74, 74); border-bottom-color: rgb(74, 74, 74); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px;">
                     <ui:Label text="7" class="cell-text" style="font-size: 60px;" />
                 </ui:VisualElement>
-                <ui:VisualElement class="sudoku-cell">
+                <ui:VisualElement name="cell-9" class="sudoku-cell" style="border-left-color: rgb(74, 74, 74); border-right-color: rgb(74, 74, 74); border-top-color: rgb(74, 74, 74); border-bottom-color: rgb(74, 74, 74); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px;">
                     <ui:Label text="9" class="cell-text" style="font-size: 60px;" />
                 </ui:VisualElement>
             </ui:VisualElement>
         </ui:VisualElement>
-        <ui:VisualElement class="footer-container">
-            <ui:VisualElement class="numpad-row">
-                <ui:Button text="1" class="button-numpad" />
-                <ui:Button text="2" class="button-numpad" />
-                <ui:Button text="3" class="button-numpad" />
-                <ui:Button text="4" class="button-numpad" />
-                <ui:Button text="5" class="button-numpad" />
+        <ui:VisualElement name="numbers-root" class="footer-container" style="width: 112%; align-content: auto; top: 0;">
+            <ui:VisualElement name="numbers-root-1" class="numpad-row">
+                <ui:Button text="1" name="one-button" class="button-numpad" style="height: 170px; width: 180px; font-size: 60px; -unity-font-style: bold; margin-top: 20px; margin-right: 20px; margin-bottom: 20px; margin-left: 20px;" />
+                <ui:Button text="2" name="Two-button" class="button-numpad" style="width: 180px; height: 170px; font-size: 60px; -unity-font-style: bold; margin-top: 20px; margin-right: 20px; margin-bottom: 20px; margin-left: 20px;" />
+                <ui:Button text="3" name="three-button" class="button-numpad" style="width: 180px; height: 170px; font-size: 60px; -unity-font-style: bold; margin-top: 20px; margin-right: 20px; margin-bottom: 20px; margin-left: 20px;" />
+                <ui:Button text="4" name="four-button" class="button-numpad" style="width: 180px; height: 170px; font-size: 60px; -unity-font-style: bold; margin-top: 20px; margin-right: 20px; margin-bottom: 20px; margin-left: 20px;" />
+                <ui:Button text="5" name="five-button" class="button-numpad" style="width: 180px; height: 170px; font-size: 60px; -unity-font-style: bold; margin-top: 20px; margin-right: 20px; margin-bottom: 20px; margin-left: 20px;" />
             </ui:VisualElement>
-            <ui:VisualElement class="numpad-row">
-                <ui:Button text="6" class="button-numpad" />
-                <ui:Button text="7" class="button-numpad" />
-                <ui:Button text="8" class="button-numpad" />
-                <ui:Button text="9" class="button-numpad" />
+            <ui:VisualElement name="numbers-root-2" class="numpad-row">
+                <ui:Button text="6" name="six-button" class="button-numpad" style="width: 180px; height: 170px; font-size: 60px; -unity-font-style: bold; margin-top: 20px; margin-right: 20px; margin-bottom: 20px; margin-left: 20px;" />
+                <ui:Button text="7" name="seven-button" class="button-numpad" style="width: 180px; height: 170px; font-size: 60px; -unity-font-style: bold; margin-top: 20px; margin-right: 20px; margin-bottom: 20px; margin-left: 20px;" />
+                <ui:Button text="8" name="eight-button" class="button-numpad" style="width: 180px; height: 170px; font-size: 60px; -unity-font-style: bold; margin-top: 20px; margin-right: 20px; margin-bottom: 20px; margin-left: 20px;" />
+                <ui:Button text="9" name="nine-button" class="button-numpad" style="height: 170px; width: 180px; font-size: 60px; -unity-font-style: bold; margin-top: 20px; margin-right: 20px; margin-bottom: 20px; margin-left: 20px;" />
             </ui:VisualElement>
-            <ui:Button text="Limpar Célula" class="button-rounded button-wide" />
+        </ui:VisualElement>
+        <ui:VisualElement name="clear-button-root" class="footer-container" style="width: 112%; align-content: auto; top: 0; height: 149px;">
+            <ui:Button text="Apagar" name="clear-button" class="button-rounded button-wide" style="height: 170px; width: 475px; font-size: 60px; top: -83px;" />
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>
