@@ -10,7 +10,7 @@
             <ui:VisualElement class="header-spacer" />
         </ui:VisualElement>
         <ui:VisualElement class="game-controls-container" />
-        <ui:VisualElement name="sudoku-grid-container" class="grid-container grid-container--sudoku" style="width: 767px;">
+        <ui:VisualElement name="sudoku-grid-container" class="grid-container grid-container--sudoku" style="width: 1080px; height: 788px;">
             <ui:VisualElement name="grid-row-0" class="sudoku-row" style="right: auto; left: auto;">
                 <ui:VisualElement name="cell-0-0" class="sudoku-cell">
                     <ui:Label text="5" class="cell-number" />
