@@ -5,15 +5,13 @@
             <ui:Button name="menu-button" class="button button--icon button--secondary" style="width: 120px; height: 80px;">
                 <ui:Label text="Menu" style="-unity-text-align: middle-center; padding-top: 30px; padding-right: 30px; padding-bottom: 30px; padding-left: 30px; font-size: 22px; top: -1px;" />
             </ui:Button>
-            <ui:Label text="SUDOKU" class="title-h1" style="align-items: auto; left: -20px;" />
+            <ui:Button text="Nova Partida" name="new-game-button" class="button" />
+            <ui:Button text="Dica" name="hint-button" class="button button--with-icon" />
             <ui:VisualElement class="header-spacer" />
         </ui:VisualElement>
-        <ui:VisualElement class="game-controls-container">
-            <ui:Button text="Dica" name="hint-button" class="button button--with-icon" />
-            <ui:Button text="Nova Partida" name="new-game-button" class="button" />
-        </ui:VisualElement>
-        <ui:VisualElement name="sudoku-grid-container" class="grid-container grid-container--sudoku">
-            <ui:VisualElement name="grid-row-0" class="sudoku-row">
+        <ui:VisualElement class="game-controls-container" />
+        <ui:VisualElement name="sudoku-grid-container" class="grid-container grid-container--sudoku" style="width: 767px;">
+            <ui:VisualElement name="grid-row-0" class="sudoku-row" style="right: auto; left: auto;">
                 <ui:VisualElement name="cell-0-0" class="sudoku-cell">
                     <ui:Label text="5" class="cell-number" />
                 </ui:VisualElement>
