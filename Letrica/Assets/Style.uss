@@ -1,461 +1,136 @@
-/* =====================================================
-    1. :root (VARIÁVEIS GLOBAIS)
-    Define a paleta de cores e tamanhos reutilizáveis
-=====================================================
-*/
-:root {
-    /* Paleta de Cores */
-    --color-bg-light: #FBF5EE;
-    --color-bg-termo: #C36B56;
-    --color-bg-sudoku: #738A5E;
-    
-    --color-panel-bg: #F5EFE3;
-    --color-key-bg: #EAE1D3;
-    --color-key-bg-secondary: #D9D2C6; /* Para botões secundários */
-
-    --color-text-dark: #4A3F35;
-    --color-text-secondary: #8A7F73;
-    --color-text-light: #FFFFFF;
-    
-    --color-grid-line: #D9CDBF;
-    --color-termo-action: #A35B48; /* Botão "ENVIAR" */
-
-    /* Sizing & Radius */
-    --radius-s: 8px;
-    --radius-m: 12px;
-    --radius-l: 20px;
-    --radius-xl: 30px; /* Para botões de menu/dica */
-}
-
-/* =====================================================
-    2. ESTILOS GLOBAIS
-    Estiliza elementos comuns em todas as telas
-=====================================================
-*/
-
-/* O container principal para todas as telas */
+/* ================= GERAL ================= */
 .root-container {
     flex-grow: 1;
+    background-color: #738A5E; /* Verde Musgo */
     align-items: center;
-    justify-content: center; /* Centraliza o conteúdo verticalmente */
-    padding: 30px;
-    width: 100%;
-    height: 100%;
+    justify-content: space-between; /* Espalha Header, Grid e Footer */
+    padding: 20px 0; /* Margem em cima e embaixo */
 }
 
-.title-h1 {
-    font-size: 48px;
+.game-title {
+    font-size: 40px;
+    color: white;
     -unity-font-style: bold;
-    color: var(--color-text-dark);
 }
 
-.subtitle {
-    font-size: 18px;
-    color: var(--color-text-secondary);
-    margin-bottom: 30px;
-}
-
-/* Estilo base para todos os botões */
-.button {
+/* ================= BOTÕES ================= */
+.button-rounded {
+    background-color: #D9D2C6; /* Bege Claro */
+    border-radius: 20px;
     border-width: 0;
-    background-color: transparent;
-    -unity-font-style: bold;
-    color: var(--color-text-dark);
-    font-size: 18px;
-    padding: 10px 15px;
-    border-radius: var(--radius-m);
-}
-
-.button:hover {
-    scale: 1.05;
-}
-
-.button:active {
-    scale: 0.98;
-}
-
-/* Para botões com ícones (Menu, Dica, etc.) */
-.button--with-icon {
-    flex-direction: row;
-    align-items: center;
-}
-
-/* O ícone em si (deve ser estilizado com um background-image no Unity) */
-.icon {
-    width: 20px;
-    height: 20px;
-    margin-right: 8px;
-    -unity-background-scale-mode: scale-to-fit;
-}
-
-/* O painel branco principal onde as grades ficam */
-.grid-container {
-    background-color: var(--color-panel-bg);
-    border-radius: var(--radius-l);
-    padding: 15px;
-    /* Sombra (box-shadow) REMOVIDA */
-    -unity-slice-left: 5;
-    -unity-slice-top: 5;
-    -unity-slice-right: 5;
-    -unity-slice-bottom: 5;
-    margin-bottom: 25px;
-}
-
-/* Container para "Dica" e "Nova Partida" */
-.game-controls-container {
-    flex-direction: row;
-    justify-content: center;
-    margin-bottom: 25px;
-}
-
-.game-controls-container .button {
-    margin: 0 10px;
-    border-radius: var(--radius-xl);
     padding: 10px 20px;
     font-size: 16px;
-    flex-direction: row;
-    align-items: center;
+    color: #4A3F35;
+    -unity-font-style: bold;
+    margin: 5px;
 }
 
-/* Container para "Apagar", "Enviar", "Limpar" */
-.action-buttons-container {
-    flex-direction: row;
-    justify-content: center;
-}
-
-/* =====================================================
-    3. TELA: MAIN MENU (MainMenu.uxml)
-=====================================================
-*/
-.main-menu-container {
-    background-color: var(--color-bg-light);
-}
-
-.header-container {
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.game-select-container {
-    flex-direction: row;
-    justify-content: center;
-    margin-bottom: 30px;
-}
-
-.game-button {
-    width: 200px;
-    height: 220px;
-    padding: 20px;
-    margin: 0 15px;
-    border-radius: var(--radius-l);
-    align-items: center;
-    justify-content: space-around; /* Distribui o conteúdo */
-}
-
-.game-button--termo {
-    background-color: var(--color-bg-termo);
-}
-
-.game-button--sudoku {
-    background-color: var(--color-bg-sudoku);
-}
-
-.game-button .icon-container {
+.button-small {
     width: 80px;
-    height: 80px;
-    background-color: rgba(255, 255, 255, 0.2);
-    border-radius: var(--radius-m);
-    align-items: center;
-    justify-content: center;
+    height: 60px;
+    white-space: normal; /* Permite quebra de linha se precisar */
 }
 
-/* O ícone dentro do container */
-.game-button .icon {
-    width: 40px;
-    height: 40px;
-    margin: 0;
+.button-wide {
+    width: 250px;
+    margin-top: 20px;
 }
 
-/* Texto dentro dos botões de jogo */
-.game-button Label {
-    color: var(--color-text-light);
-}
-
-.game-button__title {
+.button-numpad {
+    width: 50px;
+    height: 50px;
+    background-color: #EAE1D3;
+    border-radius: 10px;
+    margin: 5px;
     font-size: 24px;
-    -unity-font-style: bold;
+    color: #4A3F35;
+    border-width: 0;
 }
 
-.game-button__description {
-    font-size: 16px;
-}
-
-.footer-container {
-    align-items: center;
-}
-
-/* Botão "Configurações" */
-.main-menu-container .button {
-    background-color: var(--color-text-light);
-    border-width: 1px;
-    border-color: var(--color-grid-line);
-    border-radius: var(--radius-xl);
-    padding: 10px 20px;
-    color: var(--color-text-secondary);
-    font-size: 16px;
-}
-
-/* =====================================================
-    4. TELAS DE JOGO (Comum a Termo e Sudoku)
-=====================================================
-*/
-.game-header {
+/* ================= HEADER ================= */
+.header-top {
     width: 100%;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    /* Fixa o cabeçalho no topo */
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    right: 20px;
+    padding: 0 20px;
+    height: 80px;
 }
 
-.game-header .title-h1 {
-    color: var(--color-text-light); /* Título branco em ambas as telas */
-    margin-bottom: 0;
-}
-
-/* Espaçador para garantir que o título fique no centro */
-.header-spacer {
-    width: 90px; /* Largura aproximada do botão Menu */
-}
-
-/* Botão "Menu" */
-.game-header .button {
-    border-radius: var(--radius-xl);
-    padding: 8px 18px;
-    font-size: 16px;
-    color: var(--color-text-light);
-}
-
-/* =====================================================
-    5. TELA: TERMO (TermoScreen.uxml)
-=====================================================
-*/
-.root-container--termo {
-    background-color: var(--color-bg-termo);
-}
-
-.root-container--termo .game-header .button {
-    background-color: rgba(0, 0, 0, 0.15); /* Vermelho mais escuro */
-}
-
-.root-container--termo .game-controls-container .button {
-    background-color: var(--color-panel-bg);
-    color: var(--color-bg-termo); /* Ícone e texto vermelhos */
-}
-
-.grid-row {
-    flex-direction: row;
-    justify-content: center;
-}
-
-.grid-cell {
-    width: 60px;
-    height: 60px;
-    background-color: var(--color-text-light);
-    border-radius: var(--radius-s);
-    margin: 4px;
-    border-width: 2px;
-    border-color: var(--color-key-bg);
-}
-
-.keyboard-container {
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.keyboard-row {
-    flex-direction: row;
-    justify-content: center;
-    margin-bottom: 8px;
-}
-
-.key {
-    width: 45px;
-    height: 55px;
-    background-color: var(--color-key-bg);
-    border-radius: var(--radius-s);
-    margin: 0 3px;
-    font-size: 22px;
-    color: var(--color-text-dark);
-}
-
-.key:hover {
-    background-color: var(--color-key-bg-secondary);
-}
-
-.root-container--termo .action-buttons-container .button {
-    background-color: var(--color-key-bg);
-    color: var(--color-text-dark);
-    border-radius: var(--radius-s);
-    margin: 0 5px;
-    padding: 12px 20px;
-    font-size: 16px;
-}
-
-/* Botão "ENVIAR" */
-.root-container--termo .button--primary {
-    background-color: var(--color-termo-action);
-    color: var(--color-text-light);
-}
-
-/* =====================================================
-    6. TELA: SUDOKU (SudokuScreen.uxml)
-=====================================================
-*/
-.root-container--sudoku {
-    background-color: var(--color-bg-sudoku);
-}
-
-.root-container--sudoku .game-header .button {
-    background-color: rgba(255, 255, 255, 0.2); /* Verde mais claro */
-}
-
-.root-container--sudoku .game-controls-container .button {
-    background-color: var(--color-key-bg);
-    color: var(--color-text-dark);
-}
-
-.grid-container--sudoku {
-    padding: 10px;
-    /* Linhas superior e esquerda do container removidas, pois as células as desenham. */
-    border-color: var(--color-grid-line);
-    position: relative; 
-}
-
-.sudoku-row {
-    flex-direction: row;
-}
-
-.sudoku-cell {
-    width: 40px;
-    height: 40px;
-    /* CORRIGIDO: Todas as 4 bordas têm 1px para fechar o quadrado. */
-    border-top-width: 1px;    
-    border-left-width: 1px;   
-    border-bottom-width: 1px;
-    border-right-width: 1px;
-    border-color: var(--color-grid-line);
-    align-items: center;
-    justify-content: center;
-}
-
-/* ===================================================== */
-/* NOVOS ESTILOS PARA LINHAS GROSSAS (ELEMENTOS SEPARADOS) */
-/* ===================================================== */
-
-.sudoku-grid-lines-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    /* Altura/Largura total do container, incluindo o padding de 10px de cada lado (368px + 20px) */
-    width: 388px; 
-    height: 388px;
-    -unity-z-index: 1; 
-}
-
-.sudoku-thick-line {
-    background-color: var(--color-text-dark); /* Cor preta */
-    position: absolute;
-    -unity-z-index: 2;
-}
-
-.sudoku-thick-line--vertical {
-    width: 3px; 
-}
-
-.sudoku-thick-line--horizontal {
-    height: 3px; 
-}
-
-/* ===================================================== */
-/* NOVOS ESTILOS PARA LINHAS GROSSAS (ELEMENTOS SEPARADOS) */
-/* ===================================================== */
-
-/* Contêiner que segura as linhas grossas, deve ser ABSOLUTO no UXML */
-.sudoku-grid-lines-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    -unity-z-index: 1; 
-}
-
-/* Estilo base para os VisualElements que atuam como linhas */
-.sudoku-thick-line {
-    background-color: var(--color-text-dark); /* Cor preta */
-    position: absolute;
-    -unity-z-index: 2;
-}
-
-.sudoku-thick-line--vertical {
-    width: 3px; /* Espessura da linha vertical */
-}
-
-.sudoku-thick-line--horizontal {
-    height: 3px; /* Espessura da linha horizontal */
-}
-
-/* ===================================================== */
-/* FIM DOS NOVOS ESTILOS                                 */
-/* ===================================================== */
-
-.cell-number {
-    font-size: 28px;
-    -unity-font-style: bold;
-    color: var(--color-text-dark);
-    -unity-text-align: middle-center;
-}
-
-/* Números do usuário (exemplo de classe que você adicionaria via C#) */
-.cell-number--user {
-    color: var(--color-bg-sudoku);
-}
-
-.numpad-container {
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.numpad-row {
+.header-actions {
     flex-direction: row;
     justify-content: center;
     margin-bottom: 10px;
 }
 
-.numpad-key {
-    width: 65px;
-    height: 55px;
-    background-color: var(--color-key-bg);
-    border-radius: var(--radius-m);
-    margin: 0 5px;
-    font-size: 24px;
-    color: var(--color-text-dark);
+/* ================= GRID SUDOKU (IMPORTANTE) ================= */
+.sudoku-main-board {
+    /* 1. LARGURA RESPONSIVA: 
+       Isso diz: "Seja 95% da largura da tela, MAS não passe de 500px" */
+    width: 95%;
+    max-width: 500px;
+
+    /* 2. QUADRADO PERFEITO:
+       Isso garante que a altura acompanhe a largura automaticamente */
+    aspect-ratio: 1;
+
+    background-color: #F5EFE3;
+    border-radius: 15px;
+    padding: 5px;
+
+    /* 3. GRID LAYOUT: Faz os blocos ficarem lado a lado */
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+    /* Centraliza caso sobre espaço */
+    align-self: center; 
 }
 
-.numpad-key:hover {
-    background-color: var(--color-key-bg-secondary);
+/* OS BLOCOS 3x3 (Grid dentro de Grid) */
+.sudoku-block {
+    width: 33.33%;  /* 1/3 do tamanho do pai */
+    height: 33.33%; /* 1/3 do tamanho do pai */
+    
+    /* Linha GROSSA Externa */
+    border-width: 2px;
+    border-color: #4A3F35; /* Marrom Escuro */
+    
+    /* Layout das células internas */
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+    margin: 0;
+    padding: 0;
 }
 
-/* Botão "Limpar Célula" */
-.root-container--sudoku .button--long {
-    background-color: var(--color-key-bg);
-    color: var(--color-text-dark);
-    border-radius: var(--radius-m);
-    width: 355px; /* (65*5) + (5*4) + (5*4) */
-    padding: 12px 20px;
-    font-size: 16px;
+/* AS CÉLULAS INDIVIDUAIS */
+.sudoku-cell {
+    width: 33.33%;
+    height: 33.33%;
+    
+    /* Linha FINA Interna */
+    border-width: 0.5px;
+    border-color: #8A7F73; /* Marrom Claro */
+    
+    align-items: center;
+    justify-content: center;
+}
+
+.cell-text {
+    font-size: 28px;
+    -unity-font-style: bold;
+    color: #4A3F35;
+}
+
+/* ================= FOOTER ================= */
+.footer-container {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+.numpad-row {
+    flex-direction: row;
+    justify-content: center;
 }
