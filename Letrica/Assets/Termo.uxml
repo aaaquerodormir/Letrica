@@ -3,13 +3,13 @@
     <ui:VisualElement name="termo-screen-container" class="root-container root-container--termo">
         <ui:VisualElement name="game-header" class="game-header" style="right: 1100px; left: 0; top: 80px; height: 248px; width: 1200px;">
             <ui:Button name="menu-button" class="button button--icon button--secondary" style="width: 240px; height: 160px; right: -20px;">
-                <ui:Label text="❤️Menu" style="-unity-text-align: middle-center; padding-top: 30px; padding-right: 30px; padding-bottom: 30px; padding-left: 30px; font-size: 60px; top: -1px;" />
+                <ui:Label text="Menu" style="-unity-text-align: middle-center; padding-top: 30px; padding-right: 30px; padding-bottom: 30px; padding-left: 30px; font-size: 60px; top: -1px;" />
             </ui:Button>
             <ui:Button name="new-game-button" class="button button--secondary button--with-icon" style="bottom: 0; width: 480px; height: 160px; flex-direction: column;">
                 <ui:Label text=" Nova Partida" style="font-size: 60px; padding-top: 30px; padding-bottom: 30px;" />
             </ui:Button>
             <ui:Button name="hint-button" class="button button--secondary button--with-icon" style="bottom: 0; width: 240px; height: 160px; left: -20px;">
-                <ui:Label text="💡Dica" style="font-size: 60px; -unity-text-align: middle-center; padding-left: 30px; padding-right: 30px; padding-top: 30px; padding-bottom: 30px;" />
+                <ui:Label text="Dica" style="font-size: 60px; -unity-text-align: middle-center; padding-left: 30px; padding-right: 30px; padding-top: 30px; padding-bottom: 30px;" />
             </ui:Button>
         </ui:VisualElement>
         <ui:VisualElement name="grid-container" class="grid-container" style="height: 1100px; width: 1180px; bottom: auto; top: 0; padding-top: 15px; margin-bottom: 0; padding-bottom: 15px; background-color: rgb(253, 247, 231);">
