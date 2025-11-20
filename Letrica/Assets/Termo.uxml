@@ -1,85 +1,80 @@
 <ui:UXML xmlns="UnityEngine.UIElements" xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
     <Style src="project://database/Assets/TermoStyle.uss?fileID=7433441132597879392&amp;guid=eac2e7999831fcc4088038d0969d6c9c&amp;type=3#TermoStyle" />
     <ui:VisualElement name="termo-screen-container" class="root-container root-container--termo">
-        <ui:VisualElement name="game-header" class="game-header" style="right: -20px; left: 20px;">
+        <ui:VisualElement name="game-header" class="game-header" style="right: 0; left: 0; top: 21px;">
             <ui:Button name="menu-button" class="button button--icon button--secondary" style="width: 120px; height: 80px;">
                 <ui:Label text="Menu" style="-unity-text-align: middle-center; padding-top: 30px; padding-right: 30px; padding-bottom: 30px; padding-left: 30px; font-size: 22px; top: -1px;" />
             </ui:Button>
-            <ui:Label text="TERMO" name="game-title" class="title-h1" style="left: 25px; align-items: center; right: auto;" />
-            <ui:VisualElement class="header-spacer" />
-            <ui:VisualElement name="new-game-icon" class="icon icon--new-game" />
+            <ui:Button name="new-game-button" class="button button--secondary button--with-icon" style="bottom: 0; width: 160px; height: 80px; flex-direction: column;">
+                <ui:Label text="Nova Partida" style="font-size: 22px; padding-top: 30px; padding-bottom: 30px;" />
+            </ui:Button>
+            <ui:Button name="hint-button" class="button button--secondary button--with-icon" style="bottom: 0; width: 120px; height: 80px;">
+                <ui:Label text="Dica" style="font-size: 22px; -unity-text-align: middle-center; padding-left: 30px; padding-right: 30px; padding-top: 30px; padding-bottom: 30px;" />
+            </ui:Button>
         </ui:VisualElement>
-        <ui:VisualElement name="grid-container" class="grid-container" style="height: 450px; width: 450px; bottom: auto; top: 20px;">
+        <ui:VisualElement name="grid-container" class="grid-container" style="height: 538px; width: 538px; bottom: auto; top: 0; padding-top: 0; margin-bottom: 0;">
             <ui:VisualElement name="grid-row-0" class="grid-row">
-                <ui:VisualElement name="cell-0-0" class="grid-cell" style="background-color: rgb(39, 190, 48);">
-                    <ui:Label text="C" name="Label" style="width: 49px; height: 50px; -unity-text-align: middle-center; font-size: 32px; -unity-font-style: bold;" />
+                <ui:VisualElement name="cell-0-0" class="grid-cell" style="background-color: rgb(39, 190, 48); width: 80px; height: 80px;">
+                    <ui:Label text="C" name="Label" style="width: 69px; height: 69px; -unity-text-align: middle-center; font-size: 32px; -unity-font-style: bold;" />
                 </ui:VisualElement>
-                <ui:VisualElement name="cell-0-1" class="grid-cell" style="background-color: rgb(236, 216, 34);">
-                    <ui:Label text="A" style="width: 49px; height: 50px; -unity-text-align: middle-center; font-size: 32px; -unity-font-style: bold; -unity-background-image-tint-color: rgb(255, 255, 255);" />
+                <ui:VisualElement name="cell-0-1" class="grid-cell" style="background-color: rgb(236, 216, 34); width: 80px; height: 80px;">
+                    <ui:Label text="A" style="width: 69px; height: 69px; -unity-text-align: middle-center; font-size: 32px; -unity-font-style: bold; -unity-background-image-tint-color: rgb(255, 255, 255);" />
                 </ui:VisualElement>
-                <ui:VisualElement name="cell-0-2" class="grid-cell" style="background-color: rgb(224, 216, 216);">
-                    <ui:Label text="I" style="width: 49px; height: 50px; -unity-text-align: middle-center; font-size: 32px; -unity-font-style: bold;" />
+                <ui:VisualElement name="cell-0-2" class="grid-cell" style="background-color: rgb(224, 216, 216); width: 80px; height: 80px;">
+                    <ui:Label text="I" style="width: 69px; height: 69px; -unity-text-align: middle-center; font-size: 32px; -unity-font-style: bold;" />
                 </ui:VisualElement>
-                <ui:VisualElement name="cell-0-3" class="grid-cell" style="background-color: rgb(224, 216, 216);">
-                    <ui:Label text="J" style="width: 49px; height: 50px; -unity-text-align: middle-center; font-size: 32px; -unity-font-style: bold;" />
+                <ui:VisualElement name="cell-0-3" class="grid-cell" style="background-color: rgb(224, 216, 216); width: 80px; height: 80px;">
+                    <ui:Label text="J" style="width: 69px; height: 69px; -unity-text-align: middle-center; font-size: 32px; -unity-font-style: bold;" />
                 </ui:VisualElement>
-                <ui:VisualElement name="cell-0-4" class="grid-cell" style="background-color: rgb(236, 216, 34);">
-                    <ui:Label text="O" style="width: 49px; height: 50px; -unity-text-align: middle-center; font-size: 32px; -unity-font-style: bold;" />
+                <ui:VisualElement name="cell-0-4" class="grid-cell" style="background-color: rgb(236, 216, 34); width: 80px; height: 80px;">
+                    <ui:Label text="O" style="width: 69px; height: 69px; -unity-text-align: middle-center; font-size: 32px; -unity-font-style: bold;" />
                 </ui:VisualElement>
             </ui:VisualElement>
             <ui:VisualElement name="grid-row-1" class="grid-row">
-                <ui:VisualElement name="cell-0-0" class="grid-cell" style="background-color: rgb(39, 190, 48);">
+                <ui:VisualElement name="cell-0-0" class="grid-cell" style="background-color: rgb(39, 190, 48); width: 80px; height: 80px;">
                     <ui:Label text="C" style="width: 49px; height: 50px; -unity-text-align: middle-center; font-size: 32px; -unity-font-style: bold;" />
                 </ui:VisualElement>
-                <ui:VisualElement name="cell-0-1" class="grid-cell" style="background-color: rgb(39, 190, 48);">
+                <ui:VisualElement name="cell-0-1" class="grid-cell" style="background-color: rgb(39, 190, 48); width: 80px; height: 80px;">
                     <ui:Label text="O" style="width: 49px; height: 50px; -unity-text-align: middle-center; font-size: 32px; -unity-font-style: bold;" />
                 </ui:VisualElement>
-                <ui:VisualElement name="cell-0-2" class="grid-cell" style="background-color: rgb(236, 216, 34);">
+                <ui:VisualElement name="cell-0-2" class="grid-cell" style="background-color: rgb(236, 216, 34); width: 80px; height: 80px;">
                     <ui:Label text="L" style="width: 49px; height: 50px; -unity-text-align: middle-center; font-size: 32px; -unity-font-style: bold;" />
                 </ui:VisualElement>
-                <ui:VisualElement name="cell-0-3" class="grid-cell" style="background-color: rgb(39, 190, 48);">
+                <ui:VisualElement name="cell-0-3" class="grid-cell" style="background-color: rgb(39, 190, 48); width: 80px; height: 80px;">
                     <ui:Label text="A" style="width: 49px; height: 50px; -unity-text-align: middle-center; font-size: 32px; -unity-font-style: bold;" />
                 </ui:VisualElement>
-                <ui:VisualElement name="cell-0-4" class="grid-cell" style="background-color: rgb(236, 216, 34);">
+                <ui:VisualElement name="cell-0-4" class="grid-cell" style="background-color: rgb(236, 216, 34); width: 80px; height: 80px;">
                     <ui:Label text="R" style="width: 49px; height: 50px; -unity-text-align: middle-center; font-size: 32px; -unity-font-style: bold;" />
                 </ui:VisualElement>
             </ui:VisualElement>
             <ui:VisualElement name="grid-row-2" class="grid-row">
-                <ui:VisualElement name="cell-0-0" class="grid-cell" />
-                <ui:VisualElement name="cell-0-1" class="grid-cell" />
-                <ui:VisualElement name="cell-0-2" class="grid-cell" />
-                <ui:VisualElement name="cell-0-3" class="grid-cell" />
-                <ui:VisualElement name="cell-0-4" class="grid-cell" />
+                <ui:VisualElement name="cell-0-0" class="grid-cell" style="width: 80px; height: 80px;" />
+                <ui:VisualElement name="cell-0-1" class="grid-cell" style="width: 80px; height: 80px;" />
+                <ui:VisualElement name="cell-0-2" class="grid-cell" style="width: 80px; height: 80px;" />
+                <ui:VisualElement name="cell-0-3" class="grid-cell" style="width: 80px; height: 80px;" />
+                <ui:VisualElement name="cell-0-4" class="grid-cell" style="height: 80px; width: 80px;" />
             </ui:VisualElement>
             <ui:VisualElement name="grid-row-3" class="grid-row">
-                <ui:VisualElement name="cell-0-0" class="grid-cell" />
-                <ui:VisualElement name="cell-0-1" class="grid-cell" />
-                <ui:VisualElement name="cell-0-2" class="grid-cell" />
-                <ui:VisualElement name="cell-0-3" class="grid-cell" />
-                <ui:VisualElement name="cell-0-4" class="grid-cell" />
+                <ui:VisualElement name="cell-0-0" class="grid-cell" style="width: 80px; height: 80px;" />
+                <ui:VisualElement name="cell-0-1" class="grid-cell" style="width: 80px; height: 80px;" />
+                <ui:VisualElement name="cell-0-2" class="grid-cell" style="width: 80px; height: 80px;" />
+                <ui:VisualElement name="cell-0-3" class="grid-cell" style="width: 80px; height: 80px;" />
+                <ui:VisualElement name="cell-0-4" class="grid-cell" style="width: 80px; height: 80px;" />
             </ui:VisualElement>
             <ui:VisualElement name="grid-row-4" class="grid-row">
-                <ui:VisualElement name="cell-0-0" class="grid-cell" />
-                <ui:VisualElement name="cell-0-1" class="grid-cell" />
-                <ui:VisualElement name="cell-0-2" class="grid-cell" />
-                <ui:VisualElement name="cell-0-3" class="grid-cell" />
-                <ui:VisualElement name="cell-0-4" class="grid-cell" />
+                <ui:VisualElement name="cell-0-0" class="grid-cell" style="width: 80px; height: 80px;" />
+                <ui:VisualElement name="cell-0-1" class="grid-cell" style="width: 80px; height: 80px;" />
+                <ui:VisualElement name="cell-0-2" class="grid-cell" style="width: 80px; height: 80px;" />
+                <ui:VisualElement name="cell-0-3" class="grid-cell" style="width: 80px; height: 80px;" />
+                <ui:VisualElement name="cell-0-4" class="grid-cell" style="width: 80px; height: 80px;" />
             </ui:VisualElement>
             <ui:VisualElement name="grid-row-5" class="grid-row">
-                <ui:VisualElement name="cell-0-0" class="grid-cell" />
-                <ui:VisualElement name="cell-0-1" class="grid-cell" />
-                <ui:VisualElement name="cell-0-2" class="grid-cell" />
-                <ui:VisualElement name="cell-0-3" class="grid-cell" />
-                <ui:VisualElement name="cell-0-4" class="grid-cell" />
+                <ui:VisualElement name="cell-0-0" class="grid-cell" style="width: 80px; height: 80px;" />
+                <ui:VisualElement name="cell-0-1" class="grid-cell" style="width: 80px; height: 80px;" />
+                <ui:VisualElement name="cell-0-2" class="grid-cell" style="width: 80px; height: 80px;" />
+                <ui:VisualElement name="cell-0-3" class="grid-cell" style="width: 80px; height: 80px;" />
+                <ui:VisualElement name="cell-0-4" class="grid-cell" style="width: 80px; height: 80px;" />
             </ui:VisualElement>
-        </ui:VisualElement>
-        <ui:VisualElement name="game-controls" class="game-controls-container" style="bottom: -42px; width: 540px; height: 6%;">
-            <ui:Button name="hint-button" class="button button--secondary button--with-icon" style="bottom: -12px;">
-                <ui:Label text="Dica" style="font-size: 22px;" />
-            </ui:Button>
-            <ui:Button name="new-game-button" class="button button--secondary button--with-icon" style="bottom: -12px;">
-                <ui:Label text="Nova Partida" style="font-size: 22px;" />
-            </ui:Button>
         </ui:VisualElement>
         <ui:VisualElement name="keyboard-container" class="keyboard-container" style="bottom: -64px;">
             <ui:VisualElement name="keyboard-row-1" class="keyboard-row" style="-unity-font-style: bold;">
@@ -90,7 +85,7 @@
                 <ui:Button text="T" name="key-T" class="key" />
                 <ui:Button text="Y" name="key-Y" class="key" />
                 <ui:Button text="U" name="key-U" class="key" />
-                <ui:Button text="I" name="key-I" class="key" />
+                <ui:Button text="I" name="key-I" class="key" style="background-color: rgb(137, 132, 126);" />
                 <ui:Button text="O" name="key-O" class="key" />
                 <ui:Button text="P" name="key-P" class="key" />
             </ui:VisualElement>
@@ -101,7 +96,7 @@
                 <ui:Button text="F" name="key-F" class="key" />
                 <ui:Button text="G" name="key-G" class="key" />
                 <ui:Button text="H" name="key-H" class="key" />
-                <ui:Button text="J" name="key-J" class="key" />
+                <ui:Button text="J" name="key-J" class="key" style="background-color: rgb(137, 132, 126);" />
                 <ui:Button text="K" name="key-K" class="key" />
                 <ui:Button text="L" name="key-L" class="key" />
             </ui:VisualElement>
