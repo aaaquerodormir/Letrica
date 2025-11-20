@@ -1,29 +1,29 @@
 <ui:UXML xmlns="UnityEngine.UIElements" xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
     <Style src="project://database/Assets/StyleMenu.uss?fileID=7433441132597879392&amp;guid=a0a0dcf309dba5a4baf3ca0e399ca5d6&amp;type=3#StyleMenu" />
-    <ui:VisualElement name="main-menu-container" class="root-container" style="background-color: rgb(255, 235, 211);">
-        <ui:VisualElement name="header-container" class="header-container">
-            <ui:Label text="LETRICA" name="main-title" class="title-h1" style="-unity-font-definition: url(&quot;project://database/Library/unity%20default%20resources?fileID=10102&amp;guid=0000000000000000e000000000000000&amp;type=0#LegacyRuntime&quot;); font-size: 60px;" />
-            <ui:Label text="JOGOS PARA A MENTE" name="subtitle" class="subtitle" style="-unity-font-definition: url(&quot;project://database/Library/unity%20default%20resources?fileID=10102&amp;guid=0000000000000000e000000000000000&amp;type=0#LegacyRuntime&quot;); font-size: 22px; -unity-font-style: bold;" />
+    <ui:VisualElement name="main-menu-container" class="root-container" style="background-color: rgb(255, 236, 179);">
+        <ui:VisualElement name="header-container" class="header-container" style="margin-top: 250px; margin-bottom: 391px; align-items: center; justify-content: center; background-color: rgb(253, 247, 231); border-radius: 15px; padding: 20px; padding-right: 120px; padding-left: 120px; padding-top: 30px; padding-bottom: 30px; border-left-color: rgb(255, 179, 71); border-right-color: rgb(255, 179, 71); border-top-color: rgb(255, 179, 71); border-bottom-color: rgb(255, 179, 71); border-bottom-width: 40px; border-top-width: 40px;">
+            <ui:Label text="LETRICA" name="main-title" class="title-h1" style="font-size: 140px; color: rgb(74, 74, 74); -unity-font-style: bold; margin-bottom: 60px; border-left-color: rgb(255, 179, 71); border-right-color: rgb(255, 179, 71); border-top-color: rgb(255, 179, 71); border-bottom-color: rgb(255, 179, 71); border-bottom-width: 14px; margin-top: 8px;" />
+            <ui:Label text="JOGOS PARA A MENTE" name="subtitle" class="subtitle" style="font-size: 80px; color: rgb(74, 74, 74); -unity-font-style: bold; -unity-text-align: middle-center; white-space: normal; border-top-width: 0; border-left-color: rgb(255, 179, 71); border-right-color: rgb(255, 179, 71); border-top-color: rgb(255, 179, 71); border-bottom-color: rgb(255, 179, 71);" />
         </ui:VisualElement>
         <ui:VisualElement name="game-select-container" class="game-select-container">
-            <ui:Button name="termo-button" class="game-button game-button--termo" style="height: 259px;">
+            <ui:Button name="termo-button" class="game-button game-button--termo" style="height: 700px; width: 400px; margin-right: 130px; border-left-color: rgb(186, 81, 56); border-right-color: rgb(186, 81, 56); border-top-color: rgb(186, 81, 56); border-bottom-color: rgb(186, 81, 56); border-bottom-width: 20px; border-right-width: 15px; border-top-width: 15px; border-left-width: 15px;">
                 <ui:VisualElement name="termo-icon-container" class="icon-container">
                     <ui:VisualElement name="termo-icon" class="icon icon--brain" style="background-image: url(&quot;project://database/Assets/Images/C%C3%A9rebro.png?fileID=2800000&amp;guid=041e6444d9c96c44ab43b9a2bc0cbef7&amp;type=3#Cérebro&quot;); -unity-background-image-tint-color: rgb(255, 5, 5); background-color: rgba(255, 0, 0, 0); height: 60px; width: 60px;" />
                 </ui:VisualElement>
-                <ui:Label text="TERMO" class="game-button__title" style="font-size: 28px;" />
-                <ui:Label text="Adivinhe palavras" class="game-button__description" style="font-size: 24px; white-space: normal;" />
+                <ui:Label text="TERMO" class="game-button__title" style="font-size: 60px;" />
+                <ui:Label text="Adivinhe palavras" class="game-button__description" style="font-size: 45px; white-space: normal;" />
             </ui:Button>
-            <ui:Button name="sudoku-button" class="game-button game-button--sudoku" style="height: 260px;">
+            <ui:Button name="sudoku-button" class="game-button game-button--sudoku" style="height: 700px; width: 400px; margin-left: 40px; border-top-width: 15px; border-right-width: 15px; border-left-width: 15px; border-bottom-width: 20px; border-left-color: rgb(97, 126, 70); border-right-color: rgb(97, 126, 70); border-top-color: rgb(97, 126, 70); border-bottom-color: rgb(97, 126, 70);">
                 <ui:VisualElement name="sudoku-icon-container" class="icon-container">
                     <ui:VisualElement name="sudoku-icon" class="icon icon--grid" style="background-image: url(&quot;project://database/Assets/Images/Palavra.png?fileID=2800000&amp;guid=fd55ea28fb306b041bb8cadfc8463df2&amp;type=3#Palavra&quot;); height: 60px; width: 60px;" />
                 </ui:VisualElement>
-                <ui:Label text="SUDOKU" class="game-button__title" style="font-size: 28px;" />
-                <ui:Label text="Grade de números" class="game-button__description" style="font-size: 24px; white-space: normal; -unity-font-style: normal; -unity-text-align: middle-center;" />
+                <ui:Label text="SUDOKU" class="game-button__title" style="font-size: 60px;" />
+                <ui:Label text="Grade de números" class="game-button__description" style="font-size: 45px; white-space: normal; -unity-font-style: normal; -unity-text-align: middle-center;" />
             </ui:Button>
         </ui:VisualElement>
         <ui:VisualElement name="footer-container" class="footer-container">
-            <ui:Button name="config-button" class="game-button game-button--sudoku" style="height: 100px; width: 300px; background-color: rgb(245, 239, 227); border-top-width: 4px; border-right-width: 4px; border-bottom-width: 4px; border-left-width: 4px; border-left-color: rgb(217, 205, 191); border-right-color: rgb(217, 205, 191); border-top-color: rgb(217, 205, 191); border-bottom-color: rgb(217, 205, 191);">
-                <ui:Label text="CONFIGURAÇÕES" name="Label" style="-unity-font-definition: url(&quot;project://database/Library/unity%20default%20resources?fileID=10102&amp;guid=0000000000000000e000000000000000&amp;type=0#LegacyRuntime&quot;); font-size: 26px; -unity-text-align: upper-center; color: rgb(74, 63, 53); -unity-font-style: bold; -unity-background-image-tint-color: rgb(245, 239, 227);" />
+            <ui:Button name="config-button" class="game-button game-button--sudoku" style="height: 140px; width: 800px; background-color: rgb(255, 179, 71); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 6px; border-left-width: 2px; border-left-color: rgb(147, 70, 19); border-right-color: rgb(147, 70, 19); border-top-color: rgb(147, 70, 19); border-bottom-color: rgb(147, 70, 19); margin-top: 282px;">
+                <ui:Label text="💾 CONFIGURAÇÕES" style="font-size: 60px; color: rgb(126, 59, 10); -unity-font-style: bold; -unity-text-align: middle-center; justify-content: center; align-items: center; align-self: center; align-content: center; margin-top: 20px;" />
             </ui:Button>
         </ui:VisualElement>
     </ui:VisualElement>
