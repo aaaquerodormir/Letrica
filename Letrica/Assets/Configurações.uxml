@@ -1,45 +1,45 @@
 <ui:UXML xmlns="UnityEngine.UIElements" xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
     <Style src="project://database/Assets/StyleMenu.uss?fileID=7433441132597879392&amp;guid=a0a0dcf309dba5a4baf3ca0e399ca5d6&amp;type=3#StyleMenu" />
-    <ui:VisualElement name="main-config-container" class="root-container" style="background-color: rgb(255, 235, 211);">
-        <ui:VisualElement name="header-container" style="flex-direction: row; width: 504px; align-items: center; justify-content: center; margin-bottom: 30px; margin-top: 30px;">
-            <ui:Button name="menu-button" style="position: absolute; left: -2px; width: 120px; height: 50px; background-color: rgb(245, 239, 227); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px; border-color: rgb(217, 205, 191); border-radius: 30px; padding: 5px; flex-direction: row; align-items: center; justify-content: center; margin-left: 0; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; top: -68px;">
-                <ui:Label text="Menu" name="Label" style="font-size: 22px; -unity-text-align: middle-center; color: rgb(74, 63, 53); -unity-font-style: bold;" />
+    <ui:VisualElement name="main-config-container" class="root-container" style="background-color: rgb(255, 236, 179); flex-grow: 1; align-items: stretch; padding: 20px;">
+        <ui:VisualElement name="header-container" style="flex-direction: row; align-items: center; justify-content: flex-start; margin-bottom: 30px; margin-top: 10px; font-size: 30px;">
+            <ui:Button name="menu-button" style="width: 400px; height: 120px; background-color: rgb(240, 175, 83); border-width: 2px; border-color: rgb(74, 74, 74); border-radius: 10px; padding: 5px; flex-direction: row; align-items: center; justify-content: center; border-left-color: rgb(147, 70, 19); border-right-color: rgb(147, 70, 19); border-top-color: rgb(147, 70, 19); border-bottom-color: rgb(147, 70, 19); border-bottom-width: 6px; border-left-width: 2px; border-right-width: 2px; border-top-width: 2px; margin-top: 60px;">
+                <ui:Label text="🏠 Menu" name="Label" style="font-size: 60px; -unity-text-align: middle-center; color: rgb(74, 74, 74); -unity-font-style: bold;" />
             </ui:Button>
         </ui:VisualElement>
-        <ui:Label text="CONFIGURAÇÕES" name="main-title" class="title-h1" style="font-size: 40px; color: rgb(74, 63, 53); -unity-font-style: bold; margin-left: 4px; padding-left: 2px;" />
-        <ui:VisualElement name="space" style="flex-grow: 1; max-height: 30px; width: 450px;" />
-        <ui:VisualElement name="panels-wrapper" style="width: 504px; align-items: stretch; margin-top: 20px;">
-            <ui:VisualElement name="som-container" class="grid-container" style="height: 204px; max-height: 220px; background-color: rgb(255, 255, 255); margin-bottom: 25px; padding: 20px; border-radius: 15px;">
-                <ui:Label text="Som e Vibração" style="font-size: 24px; -unity-font-style: bold; color: rgb(74, 63, 53); margin-bottom: 15px;" />
-                <ui:VisualElement style="flex-direction: row; justify-content: space-between; align-items: center; margin-bottom: 15px;">
-                    <ui:Label text="Efeitos sonoros" style="font-size: 22px; color: rgb(74, 63, 53);" />
-                    <ui:Toggle name="toggle-sound" style="-unity-background-image-tint-color: rgb(195, 107, 86); width: 55px; height: 35px;" />
+        <ui:Label text="⚙️CONFIGURAÇÕES" name="main-title" class="title-h1" style="font-size: 100px; color: rgb(74, 74, 74); -unity-font-style: bold; margin-bottom: 40px; -unity-text-align: middle-center; margin-top: 2px;" />
+        <ui:VisualElement name="panels-wrapper" style="flex-grow: 1; align-items: stretch;">
+            
+            <ui:VisualElement name="som-container" class="grid-container" style="height: 600px; background-color: rgb(255, 255, 255); margin-bottom: 60px; padding: 20px; border-radius: 15px; margin-right: 10px; margin-left: 22px; width: 1100px; border-left-color: rgb(240, 175, 83); border-right-color: rgb(240, 175, 83); border-top-color: rgb(240, 175, 83); border-bottom-color: rgb(240, 175, 83); border-bottom-width: 20px;">
+                <ui:Label text="🔊 Som e Vibração" name="Label" style="font-size: 60px; -unity-font-style: bold; color: rgb(74, 74, 74); margin-bottom: 15px; margin-top: 30px;" />
+                
+                <ui:VisualElement style="flex-direction: row; justify-content: space-between; align-items: center; margin-bottom: 15px; padding-bottom: 70px; margin-top: 60px;">
+                    <ui:Label text="Efeitos sonoros" style="font-size: 60px; color: rgb(74, 74, 74);" />
+                    <ui:VisualElement name="checkbox-sound" style="width: 100px; height: 100px; background-color: rgb(255, 255, 255); border-width: 5px; border-radius: 10px; border-color: rgb(74, 74, 74);" />
                 </ui:VisualElement>
+                
                 <ui:VisualElement style="flex-direction: row; justify-content: space-between; align-items: center;">
-                    <ui:Label text="Vibração ao tocar" style="font-size: 22px; color: rgb(74, 63, 53);" />
-                    <ui:Toggle name="toggle-vibration" style="-unity-background-image-tint-color: rgb(195, 107, 86); width: 55px; height: 35px;" />
+                    <ui:Label text="Vibração ao tocar" style="font-size: 60px; color: rgb(74, 74, 74);" />
+                    <ui:VisualElement name="checkbox-vibration" style="width: 100px; height: 100px; background-color: rgb(255, 255, 255); border-width: 5px; border-radius: 10px; border-color: rgb(74, 74, 74);" />
                 </ui:VisualElement>
             </ui:VisualElement>
-            <ui:VisualElement name="aparencia-container" class="grid-container" style="height: 328px; max-height: 321px; background-color: rgb(255, 255, 255); margin-bottom: 25px; padding: 20px; border-radius: 15px; width: 504px;">
-                <ui:Label text="Aparência" style="font-size: 24px; -unity-font-style: bold; color: rgb(74, 63, 53); margin-bottom: 15px;" />
-                <ui:VisualElement style="margin-bottom: 15px;">
-                    <ui:Label text="Tamanho do texto" style="font-size: 22px; color: rgb(138, 127, 115); margin-bottom: 5px;" />
-                    <ui:DropdownField name="text-size-dropdown" value="Normal" style="background-color: rgb(245, 239, 227); border-radius: 8px; padding: 8px; font-size: 18px; color: rgb(74, 63, 53); border-width: 1px; border-color: rgb(217, 205, 191); padding-top: 4px; padding-right: 4px; padding-bottom: 4px; padding-left: -10px;" />
-                </ui:VisualElement>
-                <ui:VisualElement>
-                    <ui:Label text="Modo de cores" style="font-size: 22px; color: rgb(138, 127, 115); margin-bottom: 5px;" />
-                    <ui:DropdownField name="color-mode-dropdown" value="Normal" style="background-color: rgb(245, 239, 227); border-radius: 8px; padding: 8px; font-size: 18px; color: rgb(74, 63, 53); border-width: 1px; border-color: rgb(217, 205, 191); padding-top: 4px; padding-right: 4px; padding-bottom: 4px; padding-left: -10px;" />
+            
+            <ui:VisualElement name="aparencia-container" class="grid-container" style="height: 500px; background-color: rgb(255, 255, 255); margin-bottom: 60px; padding: 20px; border-radius: 15px; margin-left: 22px; margin-right: 10px; width: 1100px; border-left-color: rgb(240, 175, 83); border-right-color: rgb(240, 175, 83); border-top-color: rgb(240, 175, 83); border-bottom-color: rgb(240, 175, 83); border-bottom-width: 20px;">
+                <ui:Label text="🎨 Aparência" style="font-size: 60px; -unity-font-style: bold; color: rgb(74, 74, 74); margin-bottom: 15px; margin-top: 30px;" />
+                <ui:VisualElement style="margin-bottom: 0;">
+                    <ui:Label text="Tamanho do texto" style="font-size: 60px; color: rgb(74, 74, 74); margin-top: 30px;" />
+                    <ui:DropdownField name="text-size-dropdown" value="Grande" choices="Pequeno, Médio, Grande, Muito Grande, Extra Grande" style="background-color: rgb(253, 247, 231); border-radius: 8px; padding: 8px; font-size: 60px; color: rgb(74, 74, 74); border-width: 2px; border-color: rgb(205, 187, 157); height: 120px; flex-grow: 1; width: 1050px;" />
                 </ui:VisualElement>
             </ui:VisualElement>
-            <ui:VisualElement name="dica-container" class="grid-container" style="height: 200px; max-height: 220px; background-color: rgb(255, 255, 255); margin-bottom: 30px; padding: 20px; border-radius: 15px;">
-                <ui:Label text="Ajuda no Jogo" style="font-size: 24px; -unity-font-style: bold; color: rgb(74, 63, 53); margin-bottom: 10px;" />
-                <ui:Label text="Use o botão &quot;Dica&quot; durante o jogo para receber ajuda quando precisar. Não há limite de dicas, jogue no seu ritmo!" style="font-size: 22px; color: rgb(138, 127, 115); white-space: normal; -unity-font-style: normal;" />
+            
+            <ui:VisualElement name="dica-container" class="grid-container" style="height: 600px; background-color: rgb(255, 255, 255); margin-bottom: 30px; padding: 20px; border-radius: 15px; margin-left: 22px; margin-right: 10px; width: 1100px; border-left-color: rgb(240, 175, 83); border-right-color: rgb(240, 175, 83); border-top-color: rgb(240, 175, 83); border-bottom-color: rgb(240, 175, 83); border-bottom-width: 20px;">
+                <ui:Label text="❓ Ajuda no Jogo" style="font-size: 60px; -unity-font-style: bold; color: rgb(74, 74, 74); margin-bottom: 10px; margin-top: 30px;" />
+                <ui:Label text="💡 Use o botão &quot;Dica&quot; durante o jogo para receber ajuda quando precisar. Não há limite de dicas, jogue no seu ritmo!" style="font-size: 60px; color: rgb(74, 74, 74); white-space: normal; -unity-font-style: normal; margin-top: 30px;" />
             </ui:VisualElement>
         </ui:VisualElement>
-        <ui:VisualElement name="space" style="flex-grow: 1; max-height: 53px; width: 450px;" />
-        <ui:VisualElement name="footer-container" style="margin-bottom: 20px;">
-            <ui:Button name="save-button" style="height: 60px; width: 429px; background-color: rgb(195, 107, 86); color: rgb(255, 255, 255); border-radius: 20px; font-size: 22px; -unity-font-style: bold; border-width: 0;">
-                <ui:Label text="SALVAR CONFIGURAÇÕES" style="font-size: 22px; color: rgb(255, 255, 255); -unity-font-style: bold; -unity-text-align: middle-center;" />
+        
+        <ui:VisualElement name="footer-container" style="margin-bottom: 20px; align-items: stretch; border-left-color: rgba(147, 70, 19, 0); border-right-color: rgba(147, 70, 19, 0); border-top-color: rgba(147, 70, 19, 0); border-bottom-color: rgba(147, 70, 19, 0); border-right-width: 2px; border-top-width: 2px; border-left-width: 2px; width: 1100px; height: 160px;">
+            <ui:Button name="save-button" style="height: 120px; background-color: rgb(240, 175, 83); color: rgb(74, 74, 74); border-radius: 20px; font-size: 30px; -unity-font-style: bold; border-width: 0; border-left-color: rgb(147, 70, 19); border-right-color: rgb(147, 70, 19); border-top-color: rgb(147, 70, 19); border-bottom-color: rgb(147, 70, 19); border-bottom-width: 6px; border-right-width: 2px; border-top-width: 2px; border-left-width: 2px; width: 1100px;">
+                <ui:Label text="💾 SALVAR CONFIGURAÇÕES" style="font-size: 60px; color: rgb(126, 59, 10); -unity-font-style: bold; -unity-text-align: middle-center; justify-content: center; align-items: center; align-self: center; align-content: center; margin-top: 0px;" />
             </ui:Button>
         </ui:VisualElement>
     </ui:VisualElement>

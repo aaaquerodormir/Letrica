@@ -1,43 +1,25 @@
-/* =====================================================
-    1. :root (VARIÁVEIS GLOBAIS)
-    Define a paleta de cores e tamanhos reutilizáveis
-=====================================================
-*/
 :root {
-    /* Paleta de Cores */
-    --color-bg-light: #FBF5EE;
-    --color-bg-termo: #C36B56;
-    --color-bg-sudoku: #738A5E;
-    
-    --color-panel-bg: #F5EFE3;
-    --color-key-bg: #EAE1D3;
-    --color-key-bg-secondary: #D9D2C6; /* Para botões secundários */
-
-    --color-text-dark: #4A3F35;
-    --color-text-secondary: #8A7F73;
-    --color-text-light: #FFFFFF;
-    
-    --color-grid-line: #D9CDBF;
-    --color-termo-action: #A35B48; /* Botão "ENVIAR" */
-
-    /* Sizing & Radius */
+    --color-bg-light: rgb(251, 245, 238);
+    --color-bg-termo: rgb(195, 107, 86);
+    --color-bg-sudoku: rgb(115, 138, 94);
+    --color-panel-bg: rgb(245, 239, 227);
+    --color-key-bg: rgb(234, 225, 211);
+    --color-key-bg-secondary: rgb(217, 210, 198);
+    --color-text-dark: rgb(74, 63, 53);
+    --color-text-secondary: rgb(138, 127, 115);
+    --color-text-light: rgb(255, 255, 255);
+    --color-grid-line: rgb(217, 205, 191);
+    --color-termo-action: rgb(163, 91, 72);
     --radius-s: 8px;
     --radius-m: 12px;
     --radius-l: 20px;
-    --radius-xl: 30px; /* Para botões de menu/dica */
+    --radius-xl: 30px;
 }
 
-/* =====================================================
-    2. ESTILOS GLOBAIS
-    Estiliza elementos comuns em todas as telas
-=====================================================
-*/
-
-/* O container principal para todas as telas */
 .root-container {
     flex-grow: 1;
     align-items: center;
-    justify-content: center; /* Centraliza o conteúdo verticalmente */
+    justify-content: center;
     padding: 30px;
     width: 100%;
     height: 100%;
@@ -55,7 +37,6 @@
     margin-bottom: 30px;
 }
 
-/* Estilo base para todos os botões */
 .button {
     border-width: 0;
     background-color: transparent;
@@ -74,13 +55,11 @@
     scale: 0.98;
 }
 
-/* Para botões com ícones (Menu, Dica, etc.) */
 .button--with-icon {
     flex-direction: row;
     align-items: center;
 }
 
-/* O ícone em si (deve ser estilizado com um background-image no Unity) */
 .icon {
     width: 20px;
     height: 20px;
@@ -88,12 +67,10 @@
     -unity-background-scale-mode: scale-to-fit;
 }
 
-/* O painel branco principal onde as grades ficam */
 .grid-container {
     background-color: var(--color-panel-bg);
     border-radius: var(--radius-l);
     padding: 15px;
-    /* Sombra (box-shadow) REMOVIDA */
     -unity-slice-left: 5;
     -unity-slice-top: 5;
     -unity-slice-right: 5;
@@ -101,7 +78,6 @@
     margin-bottom: 25px;
 }
 
-/* Container para "Dica" e "Nova Partida" */
 .game-controls-container {
     flex-direction: row;
     justify-content: center;
@@ -117,16 +93,11 @@
     align-items: center;
 }
 
-/* Container para "Apagar", "Enviar", "Limpar" */
 .action-buttons-container {
     flex-direction: row;
     justify-content: center;
 }
 
-/* =====================================================
-    3. TELA: MAIN MENU (MainMenu.uxml)
-=====================================================
-*/
 .main-menu-container {
     background-color: var(--color-bg-light);
 }
@@ -149,7 +120,7 @@
     margin: 0 15px;
     border-radius: var(--radius-l);
     align-items: center;
-    justify-content: space-around; /* Distribui o conteúdo */
+    justify-content: space-around;
 }
 
 .game-button--termo {
@@ -169,14 +140,12 @@
     justify-content: center;
 }
 
-/* O ícone dentro do container */
 .game-button .icon {
     width: 40px;
     height: 40px;
     margin: 0;
 }
 
-/* Texto dentro dos botões de jogo */
 .game-button Label {
     color: var(--color-text-light);
 }
@@ -194,7 +163,6 @@
     align-items: center;
 }
 
-/* Botão "Configurações" */
 .main-menu-container .button {
     background-color: var(--color-text-light);
     border-width: 1px;
@@ -205,16 +173,11 @@
     font-size: 16px;
 }
 
-/* =====================================================
-    4. TELAS DE JOGO (Comum a Termo e Sudoku)
-=====================================================
-*/
 .game-header {
     width: 100%;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    /* Fixa o cabeçalho no topo */
     position: absolute;
     top: 20px;
     left: 20px;
@@ -222,16 +185,14 @@
 }
 
 .game-header .title-h1 {
-    color: var(--color-text-light); /* Título branco em ambas as telas */
+    color: var(--color-text-light);
     margin-bottom: 0;
 }
 
-/* Espaçador para garantir que o título fique no centro */
 .header-spacer {
-    width: 90px; /* Largura aproximada do botão Menu */
+    width: 90px;
 }
 
-/* Botão "Menu" */
 .game-header .button {
     border-radius: var(--radius-xl);
     padding: 8px 18px;
@@ -239,21 +200,17 @@
     color: var(--color-text-light);
 }
 
-/* =====================================================
-    5. TELA: TERMO (TermoScreen.uxml)
-=====================================================
-*/
 .root-container--termo {
     background-color: var(--color-bg-termo);
 }
 
 .root-container--termo .game-header .button {
-    background-color: rgba(0, 0, 0, 0.15); /* Vermelho mais escuro */
+    background-color: rgba(0, 0, 0, 0.15);
 }
 
 .root-container--termo .game-controls-container .button {
     background-color: var(--color-panel-bg);
-    color: var(--color-bg-termo); /* Ícone e texto vermelhos */
+    color: var(--color-bg-termo);
 }
 
 .grid-row {
@@ -305,22 +262,17 @@
     font-size: 16px;
 }
 
-/* Botão "ENVIAR" */
 .root-container--termo .button--primary {
     background-color: var(--color-termo-action);
     color: var(--color-text-light);
 }
 
-/* =====================================================
-    6. TELA: SUDOKU (SudokuScreen.uxml)
-=====================================================
-*/
 .root-container--sudoku {
     background-color: var(--color-bg-sudoku);
 }
 
 .root-container--sudoku .game-header .button {
-    background-color: rgba(255, 255, 255, 0.2); /* Verde mais claro */
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 .root-container--sudoku .game-controls-container .button {
@@ -345,17 +297,11 @@
     justify-content: center;
 }
 
-/* *** SEÇÃO CORRIGIDA ***
-  Use estas classes no seu UXML para criar as linhas grossas
-*/
-
-/* Adicione esta classe às células na 3ª e 6ª coluna */
 .sudoku-cell--border-right {
     border-right-width: 3px;
     border-right-color: var(--color-text-dark);
 }
 
-/* Adicione esta classe aos VisualElements da 3ª e 6ª linha */
 .sudoku-row--border-bottom .sudoku-cell {
     border-bottom-width: 3px;
     border-bottom-color: var(--color-text-dark);
@@ -367,7 +313,6 @@
     color: var(--color-text-dark);
 }
 
-/* Números do usuário (exemplo de classe que você adicionaria via C#) */
 .cell-number--user {
     color: var(--color-bg-sudoku);
 }
@@ -397,12 +342,15 @@
     background-color: var(--color-key-bg-secondary);
 }
 
-/* Botão "Limpar Célula" */
 .root-container--sudoku .button--long {
     background-color: var(--color-key-bg);
     color: var(--color-text-dark);
     border-radius: var(--radius-m);
-    width: 355px; /* (65*5) + (5*4) + (5*4) */
+    width: 355px;
     padding: 12px 20px;
     font-size: 16px;
+}
+
+.unity-button:hover {
+    scale: 1.1 1.1;
 }
